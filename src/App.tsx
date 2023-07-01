@@ -1,7 +1,8 @@
 import theme from './theme'
 import { styled } from "styled-components"
 import Navbar from "./components/Navbar"
-import { HeaderSection, PortfolioSection } from './components'
+import Footerbar from "./components/Footerbar"
+import { HeaderSection, PortfolioSection, HobbiesSection } from './components'
 import backgroundImage from './assets/stairs.png'
 import CareerSection from './components/sections/CareerSection'
 import SkillsSection from './components/sections/SkillsSection'
@@ -37,7 +38,9 @@ function App() {
             <PortfolioSection />
             <CareerSection />
             <SkillsSection />
+            <HobbiesSection />
         </Container>
+        <Footerbar />
     </AppWrapper>
 	)
 }
