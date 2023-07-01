@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar"
 import { HeaderSection, PortfolioSection } from './components'
 import backgroundImage from './assets/stairs.png'
 import CareerSection from './components/sections/CareerSection'
+import SkillsSection from './components/sections/SkillsSection'
 
 const AppWrapper = styled.div`
 	background: url(images/bg.jpg) no-repeat center center fixed; 
@@ -35,6 +36,7 @@ function App() {
             <HeaderSection />
             <PortfolioSection />
             <CareerSection />
+            <SkillsSection />
         </Container>
     </AppWrapper>
 	)
