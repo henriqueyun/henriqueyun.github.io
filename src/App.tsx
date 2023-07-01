@@ -3,6 +3,7 @@ import { styled } from "styled-components"
 import Navbar from "./components/Navbar"
 import { HeaderSection, PortfolioSection } from './components'
 import backgroundImage from './assets/stairs.png'
+import CareerSection from './components/sections/CareerSection'
 
 const AppWrapper = styled.div`
 	background: url(images/bg.jpg) no-repeat center center fixed; 
@@ -29,10 +30,11 @@ const Container = styled.main`
 function App() {
 	return (
     <AppWrapper>
-        <Navbar/>
+        <Navbar />
         <Container>
-            <HeaderSection/>
-            <PortfolioSection/>
+            <HeaderSection />
+            <PortfolioSection />
+            <CareerSection />
         </Container>
     </AppWrapper>
 	)
