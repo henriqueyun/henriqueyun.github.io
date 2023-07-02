@@ -55,6 +55,10 @@ function HobbiesSection() {
         font-size: ${theme.font.size.highlight};
         text-align: justify;
         line-height: 40px;
+        @media (max-width: 720px) {
+            line-height: 26px;
+            font-size: ${theme.font.size.content};
+        }
     `
 
     return (

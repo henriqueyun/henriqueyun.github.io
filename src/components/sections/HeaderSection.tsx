@@ -15,6 +15,7 @@ const Header = styled.header`
 const HeaderTextWrapper = styled.span`
     display: flex;
     flex-direction: column;
+    gap: 16px;
     @media (max-width: 720px) {
         gap: 32px;
     }

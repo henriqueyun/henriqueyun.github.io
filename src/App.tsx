@@ -29,6 +29,7 @@ const Container = styled.main`
     max-width: 1280px;
 	@media (max-width: 720px) {
 		align-items: center;
+		gap: 64px;
 	}
 `
 

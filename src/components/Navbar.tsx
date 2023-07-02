@@ -12,6 +12,7 @@ const Nav = styled.nav`
     max-width: 1280px;
     @media (max-width: 720px) {
         flex-direction: column;
+        padding: 64px 32px;
     }
 `
 
