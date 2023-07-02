@@ -25,12 +25,19 @@ function SkillsSection() {
         flex-direction: column;
         justify-content: center;
         gap: 48px;
+        @media (max-width: 720px) {
+            align-items: center;
+        }
     `
 
     const SkillsDivisionTitlesWrapper = styled.ul`
         display: flex;
         justify-content: center;
         gap: 40px;
+        @media (max-width: 720px) {
+            align-items: center;
+            flex-direction: column;
+        }
     `
 
     const SkillDivisionTitle = styled.li`
@@ -41,6 +48,11 @@ function SkillsSection() {
         display: flex;
         justify-content: center;
         gap: 32px;
+        @media (max-width: 720px) {
+            align-items: center;
+            width: 80%;
+            flex-wrap: wrap;
+        }
     `
 
     const Skill = styled.img`

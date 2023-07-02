@@ -21,12 +21,18 @@ function HobbiesSection() {
         display: flex;
         flex-direction: column;
         gap: 64px;
+        @media (max-width: 720px) {
+            width: 80%;
+        }
     `
 
     const HobbiesIconWrapper = styled.ul`
         display: flex;
         justify-content: center;
         gap: 32px;
+        @media (max-width: 720px) {
+            flex-direction: column;
+        }
     `
 
     const Hobbie = styled.span`
@@ -82,7 +88,7 @@ function HobbiesSection() {
                     </Hobbie>
                 </HobbiesIconWrapper>
                 <HighlightedHobbieDescription>
-                    I'm definitely not an illustrator, but since I was a kid I like to draw so every now and then I take time to doodle or watch some illustration content.
+                    I&apos;m definitely not an illustrator, but since I was a kid I like to draw so every now and then I take time to doodle or watch some illustration content.
                 </HighlightedHobbieDescription>
             </HobbiesWrapper>
         </>

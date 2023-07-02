@@ -5,9 +5,11 @@ import { styled } from "styled-components";
 function Footerbar() {
 
     const Footer = styled.footer`
+        margin: 0 auto;
         text-align: center;
         font-size: ${theme.font.size.content};
         padding: 128px 0 56px 0;
+        width: 80%;
     `
 
     return (

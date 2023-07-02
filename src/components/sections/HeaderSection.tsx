@@ -5,15 +5,23 @@ const Header = styled.header`
     display: flex;
     justify-content: space-between;
     width: 100%;
+    @media (max-width: 720px) {
+        width: 80%;
+        flex-direction: column;
+        gap: 32px;
+        text-align: center;
+    }
 `
 const HeaderTextWrapper = styled.span`
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    @media (max-width: 720px) {
+        gap: 32px;
+    }
 `
 
 const HeaderText = styled.p`
-    font-size: ${theme.font.size.highlight}
+    font-size: ${theme.font.size.highlight};
 `
 
 const HighlightedHeaderText = styled.b`
@@ -37,6 +45,9 @@ const HeaderButton = styled.a`
     display: flex;
     align-items: center;
     gap: 12px;
+    @media (max-width: 720px) {
+        justify-content: center;
+    }
 `
 
 import DownloadIcon from '../../assets/download.svg'

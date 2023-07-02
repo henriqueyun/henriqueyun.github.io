@@ -10,6 +10,9 @@ const Nav = styled.nav`
     padding: 128px 32px;
     color: white;
     max-width: 1280px;
+    @media (max-width: 720px) {
+        flex-direction: column;
+    }
 `
 
 const Logotype = styled.h1`
@@ -28,6 +31,10 @@ const NavMenu = styled.ul`
     display: flex;
     gap: 32px;
     align-items: center;
+    @media (max-width: 720px) {
+        padding-top: 32px;
+        flex-direction: column;
+    }
 `
 
 const NavMenuItem = styled.li`

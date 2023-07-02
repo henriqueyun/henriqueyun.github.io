@@ -24,10 +24,16 @@ function CareerSection() {
         display: flex;
         gap: 48px;
         padding: 0 100px;
+        @media (max-width: 720px) {
+            flex-direction: column;
+            gap: 16px;
+            padding: 0 64px;
+            align-items: center;
+            text-align: center;
+        }
     `
 
     const CareerCompanyIcon = styled.img`
-        width: 128px;
         height: 128px;
     `
 
@@ -51,6 +57,9 @@ function CareerSection() {
     const CareerPositionDescription = styled.p`
         font-size: ${theme.font.size.highlight};
         color: ${theme.palette.text.secondary};
+        @media (max-width: 720px) {
+            text-align: justify;
+        }
     `
 
     return (

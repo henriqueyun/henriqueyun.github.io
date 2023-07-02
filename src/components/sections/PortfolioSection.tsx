@@ -15,14 +15,21 @@ function PortfolioSection() {
         grid-template-columns: 1fr 1fr;
         gap: 24px;
         padding-top: 56px;
+        @media (max-width: 720px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     `
 
     const PortfolioCard = styled.div`
         background-image: linear-gradient(to right, rgba(40, 40, 40, 0.25), rgba(160, 80, 80, 0.25));
-        // background-color: pink;
         backdrop-filter: blur(4px);
         display: flex;
         flex-direction: column;
+        @media (max-width: 720px) {
+            width: 90%;
+        }
     `
 
     const PortfolioCardIcon = styled.span`
@@ -39,6 +46,11 @@ function PortfolioSection() {
         text-align: justify;
         display: flex;
         gap: 20px;
+        @media (max-width: 720px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     `
 
     const PortfolioCardMainContentText = styled.span`
