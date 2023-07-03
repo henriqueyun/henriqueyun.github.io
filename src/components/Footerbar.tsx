@@ -10,6 +10,9 @@ function Footerbar() {
         font-size: ${theme.font.size.content};
         padding: 128px 0 56px 0;
         width: 80%;
+        @media (max-width: 720px) {
+            padding: 64px 0 56px 0;
+        }
     `
 
     return (
