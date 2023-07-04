@@ -11,7 +11,7 @@ module.exports = {
   parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
   plugins: ['react-refresh'],
   rules: {
-    'react/jsx-indent': ['warn', 'tab'],
+    'react/jsx-indent': ['warn', 4],
     'react/jsx-max-props-per-line': ['warn', { 'when': 'multiline'}],
     'react/jsx-curly-spacing': ['warn', { 'children': true  }],
     'react-refresh/only-export-components': 'warn',
