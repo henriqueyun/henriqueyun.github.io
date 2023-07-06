@@ -1,6 +1,6 @@
 import theme from "../../theme";
 import { styled } from "styled-components";
-
+import { useState } from "react";
 
 import ReactIcon from '../../assets/react.png'
 import VueIcon from '../../assets/vue.png'
@@ -10,9 +10,20 @@ import JSIcon from '../../assets/js.png'
 import HtmlIcon from '../../assets/html.png'
 import CssIcon from '../../assets/css.png'
 
+import NestIcon from '../../assets/nest.png'
+import ExpressIcon from '../../assets/express.png'
+import NodeIcon from '../../assets/node.png'
+import JavaIcon from '../../assets/java.png'
+import ServerlessIcon from '../../assets/serverless.png'
+
+import MySQLIcon from '../../assets/mysql.png'
+import MicrosoftSQLIcon from '../../assets/microsoft-sql.svg'
+import MongoDBIcon from '../../assets/mongodb.png'
+import PostgreSQLIcon from '../../assets/postgres.png'
+
 
 function SkillsSection() {
-    
+
     const SkillsHeader = styled.h1`
         font-size: ${theme.font.size.title};
         font-weight: ${theme.font.weight.bold};
@@ -42,6 +53,11 @@ function SkillsSection() {
 
     const SkillDivisionTitle = styled.li`
         font-size: ${theme.font.size.highlight};
+        cursor: pointer;
+    `
+
+    const SelectedSkillDivisionTitle = styled(SkillDivisionTitle)`
+        font-weight: ${theme.font.weight.bold};
     `
 
     const SkillsDivisionIconWrapper = styled.ul`
@@ -60,24 +76,87 @@ function SkillsSection() {
         width: 64px;
     `
 
+    const SkillBg = styled.span`
+        background-color: ${theme.palette.primary};
+        padding: 8px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.4);
+    `
+
+    const divisions = ["FRONT END", "BACK END", "DATABASES"]
+    const [selectedDivision, setSelectedDivision] = useState(divisions[0])
+
     return (
         <>
             <SkillsHeader>SKILLS</SkillsHeader>
             <SkillsDivisionWrapper>
                 <SkillsDivisionTitlesWrapper>
-                    <SkillDivisionTitle>FRONT END</SkillDivisionTitle>
-                    <SkillDivisionTitle>BACK END</SkillDivisionTitle>
-                    <SkillDivisionTitle>DATABASES</SkillDivisionTitle>
+                    {divisions.map(division => (
+                        division !== selectedDivision
+                            ? (<SkillDivisionTitle key={division} onClick={() => setSelectedDivision(division)}>{division}</SkillDivisionTitle>)
+                            : (<SelectedSkillDivisionTitle key={division}>{division}</SelectedSkillDivisionTitle>)
+                    ))}
                 </SkillsDivisionTitlesWrapper>
-                <SkillsDivisionIconWrapper>
-                    <Skill src={ReactIcon} alt="React icon"/>
-                    <Skill src={VueIcon} alt="Vue icon"/>
-                    <Skill src={MaterialUIIcon} alt="Material UI icon"/>
-                    <Skill src={SassIcon} alt="SASS icon"/>
-                    <Skill src={JSIcon} alt="Javascript icon"/>
-                    <Skill src={HtmlIcon} alt="HTML icon"/>
-                    <Skill src={CssIcon} alt="CSS icon"/>
-                </SkillsDivisionIconWrapper>
+                {selectedDivision === 'FRONT END'
+                    ? (
+                        <SkillsDivisionIconWrapper>
+                            <SkillBg>
+                                <Skill src={ReactIcon} alt="React icon" title="React" />
+                            </SkillBg>
+                            <SkillBg>
+                                <Skill src={VueIcon} alt="Vue icon" title="Vue" />
+                            </SkillBg>
+                            <SkillBg>
+                                <Skill src={MaterialUIIcon} alt="Material UI icon" title="Material UI" />
+                            </SkillBg>
+                            <SkillBg>
+                                <Skill src={SassIcon} alt="SASS icon" title="SASS" />
+                            </SkillBg>
+                            <SkillBg>
+                                <Skill src={JSIcon} alt="Javascript icon" title="Javascript" />
+                            </SkillBg>
+                            <SkillBg>
+                                <Skill src={HtmlIcon} alt="HTML icon" title="HTML" />
+                            </SkillBg>
+                            <SkillBg>
+                                <Skill src={CssIcon} alt="CSS icon" title="CSS" />
+                            </SkillBg>
+                        </SkillsDivisionIconWrapper>
+                    ) : selectedDivision === 'BACK END' ? (
+                        <SkillsDivisionIconWrapper>
+                            <SkillBg>
+                                <Skill src={NestIcon} alt="Nest icon" title="Nest" />
+                            </SkillBg>
+                            <SkillBg>
+                                <Skill src={ExpressIcon} alt="Express icon" title="Express" />
+                            </SkillBg>
+                            <SkillBg>
+                                <Skill src={NodeIcon} alt="Node icon" title="Node" />
+                            </SkillBg>
+                            <SkillBg>
+                                <Skill src={JavaIcon} alt="Java icon" title="Java" />
+                            </SkillBg>
+                            <SkillBg>
+                                <Skill src={ServerlessIcon} alt="Serverless icon" title="Serverless" />
+                            </SkillBg>
+                        </SkillsDivisionIconWrapper>
+                    ) : (
+                        <SkillsDivisionIconWrapper>
+                            <SkillBg>
+                                <Skill src={MySQLIcon} alt="My SQL icon" title="MySQL" />
+                            </SkillBg>
+                            <SkillBg>
+                                <Skill src={MicrosoftSQLIcon} alt="Microsoft SQL icon" title="Microsoft SQL" />
+                            </SkillBg>
+                            <SkillBg>
+                                <Skill src={MongoDBIcon} alt="Mongo DB icon" title="MongoDB" />
+                            </SkillBg>
+                            <SkillBg>
+                                <Skill src={PostgreSQLIcon} alt="Postgre SQL icon" title="PostgreSQL" />
+                            </SkillBg>
+                        </SkillsDivisionIconWrapper>
+                    )
+                }
             </SkillsDivisionWrapper>
         </>
     );

@@ -46,6 +46,13 @@ const HeaderButton = styled.a`
     display: flex;
     align-items: center;
     gap: 12px;
+    &:hover {
+        background-color: rgba(238, 68, 68, 0.1);
+    }
+    &:active {
+        color: red;
+        border-color: red;
+    }
     @media (max-width: 720px) {
         justify-content: center;
     }
