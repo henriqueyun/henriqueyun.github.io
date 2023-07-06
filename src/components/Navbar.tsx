@@ -17,19 +17,33 @@ function Navbar() {
         width: 100%;
         margin: 0 auto;
         padding: 128px 32px;
-        color: white;
         max-width: 1280px;
-        @media (max-width: 720px) {
-            flex-direction: column;
-            padding: 48px 32px;
-            gap: 32px;
+        color: white;
+        li:hover {
+            color: ${theme.palette.primary};
         }
+        li > img {
+            border: solid transparent;
+            border-width: 0 0 2px 0; 
+            padding: 0 0 2px 0;
+            &:hover {
+                border-color: white;
+            }
+        }
+        @media (max-width: 720px) {
+                flex-direction: column;
+                padding: 48px 32px;
+                gap: 32px;
+            }
     `
 
     const Logotype = styled.h1`
         font-size: ${theme.font.size.highlight};
         font-family: ${theme.font.family.title};
         font-weight: ${theme.font.weight.bold};
+        &:hover {
+            color: ${theme.palette.primary};
+        }
     `
 
     const LogotypeLink = styled.a`
@@ -40,24 +54,25 @@ function Navbar() {
     const DrawerWrapper = styled.div`
         display: flex;
         flex-direction: column;
-
     `
 
     const DrawerToggler = styled.button`
-        display: ${displayNavItems ? 'display' : 'none' };
-        background-color: unset;
-        border: none;
-        cursor: pointer;
+        display: none;
         @media (max-width: 720px) {
+            display: ${displayNavItems ? 'display' : 'none' };
+            background-color: unset;
+            border: none;
+            cursor: pointer;
             display: block;
         }
     `
 
     const MobileDrawerNavMenu = styled.ul`
-        display: ${displayNavItems ? 'flex' : 'none'};
-        gap: 32px;
-        align-items: center;
+        display: none;
         @media (max-width: 720px) {
+            display: ${displayNavItems ? 'flex' : 'none'};
+            gap: 32px;
+            align-items: center;
             padding: 32px 0;
             flex-direction: column;
         }
@@ -76,6 +91,7 @@ function Navbar() {
     const NavMenuItem = styled.li`
         font-size: ${theme.font.size.highlight};
         font-family: ${theme.font.family.title};
+        cursor: pointer;
     `
 
     const Icon = styled.img`

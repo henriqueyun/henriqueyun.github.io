@@ -1,5 +1,5 @@
 import theme from '../../theme'
-import { styled } from "styled-components";
+import { styled } from "styled-components"
 
 import ZRPIcon from '../../assets/zrp.png'
 import iColaboraIcon from '../../assets/icolabora.png'
