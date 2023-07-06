@@ -1,6 +1,6 @@
-import theme from "../../theme";
-import { styled } from "styled-components";
-import { useState } from "react";
+import theme from "../../theme"
+import { styled } from "styled-components"
+import { useState } from "react"
 
 import ReactIcon from '../../assets/react.png'
 import VueIcon from '../../assets/vue.png'
@@ -85,6 +85,7 @@ function SkillsSection() {
 
     const divisions = ["FRONT END", "BACK END", "DATABASES"]
     const [selectedDivision, setSelectedDivision] = useState(divisions[0])
+
 
     return (
         <>
