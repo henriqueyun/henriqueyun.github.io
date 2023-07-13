@@ -5,7 +5,7 @@ const Header = styled.header`
     display: flex;
     justify-content: space-between;
     width: 100%;
-    @media (max-width: 720px) {
+    @media (max-width: 768px) {
         width: 80%;
         flex-direction: column;
         gap: 32px;
@@ -16,7 +16,7 @@ const HeaderTextWrapper = styled.span`
     display: flex;
     flex-direction: column;
     gap: 16px;
-    @media (max-width: 720px) {
+    @media (max-width: 768px) {
         gap: 32px;
     }
 `
@@ -53,7 +53,7 @@ const HeaderButton = styled.a`
         color: red;
         border-color: red;
     }
-    @media (max-width: 720px) {
+    @media (max-width: 768px) {
         justify-content: center;
     }
 `

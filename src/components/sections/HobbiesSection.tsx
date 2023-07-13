@@ -9,57 +9,64 @@ import LivestreamIcon from '../../assets/livestream.png'
 import PizzaIcon from '../../assets/pizza.png'
 import IllustrationIcon from '../../assets/illustration.png'
 
+const HobbiesHeader = styled.h1`
+    font-size: ${theme.font.size.title};
+    font-weight: ${theme.font.weight.bold};
+    text-align: center;
+    color: ${theme.palette.primary};
+`
+
+const HobbiesWrapper = styled.section`
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    @media (max-width: 768px) {
+        width: 80%;
+    }
+`
+
+const HobbiesIconWrapper = styled.ul`
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+`
+
+const Hobbie = styled.span`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    cursor: pointer;
+`
+
+const HobbieIcon = styled.img`
+    width: 64px;
+    height: 64px;
+    @media (max-width: 768px) {
+        width: 40px;
+        height: 40px;
+    }
+`
+
+const HobbieTitle = styled.li`
+    font-size: ${theme.font.size.highlight};
+    @media (max-width: 768px) {
+        font-size: ${theme.font.size.content};
+    }
+`
+
+const HighlightedHobbieDescription = styled.p`
+    font-size: ${theme.font.size.highlight};
+    text-align: justify;
+    line-height: 40px;
+    @media (max-width: 768px) {
+        line-height: 26px;
+        font-size: ${theme.font.size.content};
+    }
+`
+
 function HobbiesSection() {
-
-    const HobbiesHeader = styled.h1`
-        font-size: ${theme.font.size.title};
-        font-weight: ${theme.font.weight.bold};
-        text-align: center;
-        color: ${theme.palette.primary};
-    `
-
-    const HobbiesWrapper = styled.section`
-        display: flex;
-        flex-direction: column;
-        gap: 64px;
-        @media (max-width: 720px) {
-            width: 80%;
-        }
-    `
-
-    const HobbiesIconWrapper = styled.ul`
-        display: flex;
-        justify-content: center;
-        gap: 32px;
-        flex-wrap: wrap;
-    `
-
-    const Hobbie = styled.span`
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 32px;
-        cursor: pointer;
-    `
-
-    const HobbieIcon = styled.img`
-        width: 64px;
-        height: 64px;
-    `
-
-    const HobbieTitle = styled.li`
-        font-size: ${theme.font.size.highlight};
-    `
-
-    const HighlightedHobbieDescription = styled.p`
-        font-size: ${theme.font.size.highlight};
-        text-align: justify;
-        line-height: 40px;
-        @media (max-width: 720px) {
-            line-height: 26px;
-            font-size: ${theme.font.size.content};
-        }
-    `
 
     const texts = {
         chess: "I was introduced to chess in school by some classmates, I practiced it a little and I even was part of the school chess team by a while. Nowadays,  I used to keep up with world chess scenario, and sometimes I play as a casual player in chess.com",
@@ -69,6 +76,7 @@ function HobbiesSection() {
         pizza: "São Paulo, Brazil has a pretty cool pizza culture; pepperoni pizza is my favorite food since I was a kid so if you're going to ask me to eat it's definitely the right order",
         illustration: "I'm definitely not an illustrator, but since I was a kid I like to draw so every now and then I take time to doodle or watch some illustration content"
     }
+
     const [selectedHobbie, setSelectedHobbie] = useState(texts.illustration);
 
     return (

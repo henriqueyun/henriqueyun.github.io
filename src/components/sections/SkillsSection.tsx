@@ -21,71 +21,69 @@ import MicrosoftSQLIcon from '../../assets/microsoft-sql.svg'
 import MongoDBIcon from '../../assets/mongodb.png'
 import PostgreSQLIcon from '../../assets/postgres.png'
 
+const SkillsHeader = styled.h1`
+    font-size: ${theme.font.size.title};
+    font-weight: ${theme.font.weight.bold};
+    text-align: center;
+    color: ${theme.palette.primary};
+`
+
+const SkillsDivisionWrapper = styled.ul`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 48px;
+    @media (max-width: 768px) {
+        align-items: center;
+    }
+`
+
+const SkillsDivisionTitlesWrapper = styled.ul`
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    @media (max-width: 768px) {
+        align-items: center;
+        flex-direction: column;
+    }
+`
+
+const SkillDivisionTitle = styled.li`
+    font-size: ${theme.font.size.highlight};
+    cursor: pointer;
+`
+
+const SelectedSkillDivisionTitle = styled(SkillDivisionTitle)`
+    font-weight: ${theme.font.weight.bold};
+`
+
+const SkillsDivisionIconWrapper = styled.ul`
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    @media (max-width: 768px) {
+        align-items: center;
+        width: 80%;
+        flex-wrap: wrap;
+    }
+`
+
+const Skill = styled.img`
+    height: 64px;
+    width: 64px;
+`
+
+const SkillBg = styled.span`
+    background-color: ${theme.palette.primary};
+    padding: 8px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.4);
+`
 
 function SkillsSection() {
 
-    const SkillsHeader = styled.h1`
-        font-size: ${theme.font.size.title};
-        font-weight: ${theme.font.weight.bold};
-        text-align: center;
-        color: ${theme.palette.primary};
-    `
-
-    const SkillsDivisionWrapper = styled.ul`
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 48px;
-        @media (max-width: 720px) {
-            align-items: center;
-        }
-    `
-
-    const SkillsDivisionTitlesWrapper = styled.ul`
-        display: flex;
-        justify-content: center;
-        gap: 40px;
-        @media (max-width: 720px) {
-            align-items: center;
-            flex-direction: column;
-        }
-    `
-
-    const SkillDivisionTitle = styled.li`
-        font-size: ${theme.font.size.highlight};
-        cursor: pointer;
-    `
-
-    const SelectedSkillDivisionTitle = styled(SkillDivisionTitle)`
-        font-weight: ${theme.font.weight.bold};
-    `
-
-    const SkillsDivisionIconWrapper = styled.ul`
-        display: flex;
-        justify-content: center;
-        gap: 32px;
-        @media (max-width: 720px) {
-            align-items: center;
-            width: 80%;
-            flex-wrap: wrap;
-        }
-    `
-
-    const Skill = styled.img`
-        height: 64px;
-        width: 64px;
-    `
-
-    const SkillBg = styled.span`
-        background-color: ${theme.palette.primary};
-        padding: 8px;
-        border-radius: 50%;
-        background-color: rgba(255, 255, 255, 0.4);
-    `
-
     const divisions = ["FRONT END", "BACK END", "DATABASES"]
     const [selectedDivision, setSelectedDivision] = useState(divisions[0])
-
 
     return (
         <>

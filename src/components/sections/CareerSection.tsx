@@ -5,72 +5,72 @@ import ZRPIcon from '../../assets/zrp.png'
 import iColaboraIcon from '../../assets/icolabora.png'
 import InputIcon from '../../assets/input.png'
 
-function CareerSection() {
+const CareerHeader = styled.h1`
+    font-size: ${theme.font.size.title};
+    font-weight: ${theme.font.weight.bold};
+    text-align: center;
+    color: ${theme.palette.primary};
+`
 
-    const CareerHeader = styled.h1`
-        font-size: ${theme.font.size.title};
-        font-weight: ${theme.font.weight.bold};
-        text-align: center;
-        color: ${theme.palette.primary};
-    `
+const CareerJobCardWrapper = styled.section`
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+`    
 
-    const CareerJobCardWrapper = styled.section`
-        display: flex;
-        flex-direction: column;
-        gap: 72px;
-    `    
-
-    const CareerJobCard = styled.div`
-        display: flex;
-        gap: 48px;
-        padding: 0 100px;
-        @media (max-width: 720px) {
-            flex-direction: column;
-            gap: 16px;
-            padding: 0 32px;
-            align-items: center;
-            text-align: center;
-        }
-    `
-
-    const CareerCompanyIcon = styled.img`
-        height: 128px;
-    `
-
-    const CareerJobCardContent = styled.span`
-        display: flex;
+const CareerJobCard = styled.div`
+    display: flex;
+    gap: 48px;
+    padding: 0 100px;
+    @media (max-width: 768px) {
         flex-direction: column;
         gap: 16px;
-    `
+        padding: 0 32px;
+        align-items: center;
+        text-align: center;
+    }
+`
 
-    const CareerCompanyTitle = styled.h2`
-        font-size: ${theme.font.size.highlight};
-        font-weight: ${theme.font.weight.bold};
-    `
+const CareerCompanyIcon = styled.img`
+    height: 128px;
+`
 
-    const CareerPositionTitle = styled.h3`
-        font-size: ${theme.font.size.highlight};
-        font-weight: ${theme.font.weight.bold};
-        color: ${theme.palette.primary};
-    `
+const CareerJobCardContent = styled.span`
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+`
 
-    const CareerPositionTimeInterval = styled.h3`
-        font-size: ${theme.font.size.highlight};
-        font-weight: ${theme.font.weight.bold};
-        color: ${theme.palette.primary};
-        @media (max-width: 720px) {
-            font-size: ${theme.font.size.content};
-        }
-    `
+const CareerCompanyTitle = styled.h2`
+    font-size: ${theme.font.size.highlight};
+    font-weight: ${theme.font.weight.bold};
+`
 
-    const CareerPositionDescription = styled.p`
-        font-size: ${theme.font.size.highlight};
-        color: ${theme.palette.text.secondary};
-        @media (max-width: 720px) {
-            text-align: justify;
-            font-size: ${theme.font.size.content};
-        }
-    `
+const CareerPositionTitle = styled.h3`
+    font-size: ${theme.font.size.highlight};
+    font-weight: ${theme.font.weight.bold};
+    color: ${theme.palette.primary};
+`
+
+const CareerPositionTimeInterval = styled.h3`
+    font-size: ${theme.font.size.highlight};
+    font-weight: ${theme.font.weight.bold};
+    color: ${theme.palette.primary};
+    @media (max-width: 768px) {
+        font-size: ${theme.font.size.content};
+    }
+`
+
+const CareerPositionDescription = styled.p`
+    font-size: ${theme.font.size.highlight};
+    color: ${theme.palette.text.secondary};
+    @media (max-width: 768px) {
+        text-align: justify;
+        font-size: ${theme.font.size.content};
+    }
+`
+
+function CareerSection() {
 
     return (
         <>
