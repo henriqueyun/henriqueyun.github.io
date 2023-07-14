@@ -48,13 +48,11 @@ const SkillsDivisionTitlesWrapper = styled.ul`
     }
 `
 
-const SkillDivisionTitle = styled.li`
+const SkillDivisionTitle = styled.li<{ $selected: boolean; }>`
     font-size: ${theme.font.size.highlight};
-    cursor: pointer;
-`
-
-const SelectedSkillDivisionTitle = styled(SkillDivisionTitle)`
+    color: ${props => props.$selected ? theme.palette.text.primary : theme.palette.text.secondary};
     font-weight: ${theme.font.weight.bold};
+    cursor: pointer;
 `
 
 const SkillsDivisionIconWrapper = styled.ul`
@@ -91,9 +89,12 @@ function SkillsSection() {
             <SkillsDivisionWrapper>
                 <SkillsDivisionTitlesWrapper>
                     {divisions.map(division => (
-                        division !== selectedDivision
-                            ? (<SkillDivisionTitle key={division} onClick={() => setSelectedDivision(division)}>{division}</SkillDivisionTitle>)
-                            : (<SelectedSkillDivisionTitle key={division}>{division}</SelectedSkillDivisionTitle>)
+                        <SkillDivisionTitle $selected={division === selectedDivision}
+	key={division}
+	onClick={() => setSelectedDivision(division)}
+                        >
+                            {division}
+                        </SkillDivisionTitle>
                     ))}
                 </SkillsDivisionTitlesWrapper>
                 {selectedDivision === 'FRONT END'

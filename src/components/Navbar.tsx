@@ -69,7 +69,7 @@ const MobileDrawerNavMenu = styled.ul<{ $display?: boolean;}>`
         display: ${props => props.$display ? 'flex' : 'none'};
         gap: 32px;
         align-items: center;
-        padding: 32px 0;
+        padding-top: 32px;
         flex-direction: column;
     }
 `
