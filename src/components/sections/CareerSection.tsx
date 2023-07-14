@@ -75,7 +75,7 @@ function CareerSection() {
     return (
         <>
             <CareerJobCardWrapper>
-                <CareerHeader>CAREER</CareerHeader>
+                <CareerHeader id="career-section">CAREER</CareerHeader>
                 <CareerJobCard>
                     <CareerCompanyIcon src={ZRPIcon} />
                     <CareerJobCardContent>

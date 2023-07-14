@@ -83,7 +83,7 @@ function PortfolioSection() {
 
     return (
         <section>
-            <PortfolioHeader>
+            <PortfolioHeader id="portfolio-section">
                 PORTFOLIO
             </PortfolioHeader>
             <PortfolioCardsWrapper>

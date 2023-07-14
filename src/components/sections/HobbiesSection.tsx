@@ -118,7 +118,7 @@ function HobbiesSection() {
 
     return (
         <>
-            <HobbiesHeader>HOBBIES</HobbiesHeader>
+            <HobbiesHeader id="hobbies-section">HOBBIES</HobbiesHeader>
             <HobbiesWrapper>
                 <HobbiesIconWrapper>
                     {hobbies.map((hobbie: Hobbie) => (

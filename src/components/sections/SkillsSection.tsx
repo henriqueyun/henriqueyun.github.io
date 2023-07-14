@@ -85,7 +85,7 @@ function SkillsSection() {
 
     return (
         <>
-            <SkillsHeader>SKILLS</SkillsHeader>
+            <SkillsHeader id="skills-section">SKILLS</SkillsHeader>
             <SkillsDivisionWrapper>
                 <SkillsDivisionTitlesWrapper>
                     {divisions.map(division => (

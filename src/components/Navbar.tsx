@@ -28,9 +28,9 @@ const Nav = styled.nav`
     }
     @media (max-width: 768px) {
             flex-direction: column;
-            padding: 48px 32px;
+            padding: 48px 32px 32px 32px;
             gap: 32px;
-        }
+    }
 `
 
 const Logotype = styled.h1`
@@ -94,6 +94,15 @@ const Icon = styled.img`
     width: ${theme.font.size.highlight};
 `
 
+const NavMenuItems = [
+    <NavMenuItem key="nav-menu-item-portfolio" onClick={() => document.querySelector("#portfolio-section")?.scrollIntoView({ behavior: 'smooth' })}>portfolio</NavMenuItem>,
+    <NavMenuItem key="nav-menu-item-career" onClick={() => document.querySelector("#career-section")?.scrollIntoView({ behavior: 'smooth' })}>career</NavMenuItem>,
+    <NavMenuItem key="nav-menu-item-skills" onClick={() => document.querySelector("#skills-section")?.scrollIntoView({ behavior: 'smooth' })}>skills</NavMenuItem>,
+    <NavMenuItem key="nav-menu-item-hobbies" onClick={() => document.querySelector("#hobbies-section")?.scrollIntoView({ behavior: 'smooth' })}>hobbies</NavMenuItem>,
+    <NavMenuItem key="nav-menu-item-linkedin"><Icon src={LinkedinIcon} alt="Linkedin icon" /></NavMenuItem>,
+    <NavMenuItem key="nav-menu-item-github"><Icon src={GithubIcon} alt="Github icon" /></NavMenuItem>,
+]
+
 function Navbar() {
 
     const [displayNavItems, setDisplayNavItems] = useState(false);
@@ -106,20 +115,10 @@ function Navbar() {
             <DrawerWrapper>
                 <DrawerToggler onClick={() => setDisplayNavItems(!displayNavItems)} $display={displayNavItems}><img src={HamburguerIcon} alt="Hamburguer icon" /></DrawerToggler>
                 <MobileDrawerNavMenu $display={displayNavItems}>
-                    <NavMenuItem>portfolio</NavMenuItem>
-                    <NavMenuItem>career</NavMenuItem>
-                    <NavMenuItem>skills</NavMenuItem>
-                    <NavMenuItem>hobbies</NavMenuItem>
-                    <NavMenuItem><Icon src={LinkedinIcon} alt="Linkedin icon" /></NavMenuItem>
-                    <NavMenuItem><Icon src={GithubIcon} alt="Github icon" /></NavMenuItem>
+                    {NavMenuItems.map(navMenuItem => navMenuItem)}
                 </MobileDrawerNavMenu>
                 <DrawerNavMenu>
-                    <NavMenuItem>portfolio</NavMenuItem>
-                    <NavMenuItem>career</NavMenuItem>
-                    <NavMenuItem>skills</NavMenuItem>
-                    <NavMenuItem>hobbies</NavMenuItem>
-                    <NavMenuItem><Icon src={LinkedinIcon} alt="Linkedin icon" /></NavMenuItem>
-                    <NavMenuItem><Icon src={GithubIcon} alt="Github icon" /></NavMenuItem>
+                    {NavMenuItems.map(navMenuItem => navMenuItem)}
                 </DrawerNavMenu>
             </DrawerWrapper>
         </Nav>
