@@ -1,6 +1,11 @@
 import { styled } from 'styled-components'
 import theme from '../../theme'
 
+import ArarastoreIcon from '../../assets/ararastore.png'
+import MoviesIcon from '../../assets/movies.png'
+import PokeabilitiesIcon from '../../assets/pokeabilities.png'
+import XetIcon from '../../assets/xet.png'
+
 const PortfolioHeader = styled.h1`
     font-size: ${theme.font.size.title};
     font-weight: ${theme.font.weight.bold};
@@ -31,7 +36,7 @@ const PortfolioCard = styled.div`
     }
 `
 
-const PortfolioCardIcon = styled.span`
+const PortfolioCardIcon = styled.img`
     width: 128px;
     height: 128px;
     border: solid;
@@ -60,9 +65,14 @@ const PortfolioCardMainContentText = styled.span`
 
 const PortfolioCardBottomContent = styled.span`
     display: flex;
+    flex-wrap: wrap;
     justify-content: end;
     gap: 8px;
     padding: 0px 24px 24px 0;
+    @media (max-width: 768px) {
+        justify-content: center;
+        padding: 0px 24px 24px 24px;
+    }
 `
 
 const PortfolioCardTitle = styled.h2`
@@ -90,68 +100,72 @@ function PortfolioSection() {
                 <PortfolioCard>
                     <PortfolioCardMainContent>
                         <div>
-                            <PortfolioCardIcon />
+                            <PortfolioCardIcon src={ArarastoreIcon} alt="Ararastore icon" />
                         </div>
                         <PortfolioCardMainContentText>
-                            <PortfolioCardTitle>No Projects Im Busy</PortfolioCardTitle>
-                            <PortfolioCardDescription>Não há protótipo utilizando apenas HTML, CSS e Javascript puros de um site pessoal.</PortfolioCardDescription>
+                            <PortfolioCardTitle>Ararastore</PortfolioCardTitle>
+                            <PortfolioCardDescription>This was my college final project. It&apos;s a fashion e-commerce focused on early entrepeneurs to make they products available online</PortfolioCardDescription>
                         </PortfolioCardMainContentText>
                     </PortfolioCardMainContent>
 
                     <PortfolioCardBottomContent>
-                        <PortfolioBadge>Absolute</PortfolioBadge>
-                        <PortfolioBadge>Nothing</PortfolioBadge>
+                        <PortfolioBadge>React.js</PortfolioBadge>
+                        <PortfolioBadge>Nest.js</PortfolioBadge>
+                        <PortfolioBadge>Vite</PortfolioBadge>
                     </PortfolioCardBottomContent>
                 </PortfolioCard>
 
                 <PortfolioCard>
                     <PortfolioCardMainContent>
                         <div>
-                            <PortfolioCardIcon />
+                            <PortfolioCardIcon src={MoviesIcon} alt="Movies icon"/>
                         </div>
                         <PortfolioCardMainContentText>
-                            <PortfolioCardTitle>No Projects Im Busy</PortfolioCardTitle>
-                            <PortfolioCardDescription>Não há protótipo utilizando apenas HTML, CSS e Javascript puros de um site pessoal.</PortfolioCardDescription>
+                            <PortfolioCardTitle>The Movies API</PortfolioCardTitle>
+                            <PortfolioCardDescription>It&apos;s user interface built with React.js that consumes The Movies API. It uses pure CSS only and has features like search and pagination</PortfolioCardDescription>
                         </PortfolioCardMainContentText>
                     </PortfolioCardMainContent>
 
                     <PortfolioCardBottomContent>
-                        <PortfolioBadge>Absolute</PortfolioBadge>
-                        <PortfolioBadge>Nothing</PortfolioBadge>
+                        <PortfolioBadge>React.js</PortfolioBadge>
+                        <PortfolioBadge>CSS</PortfolioBadge>
+                        <PortfolioBadge>Vite</PortfolioBadge>
+                        <PortfolioBadge>API</PortfolioBadge>
                     </PortfolioCardBottomContent>
                 </PortfolioCard>
 
                 <PortfolioCard>
                     <PortfolioCardMainContent>
                         <div>
-                            <PortfolioCardIcon />
+                            <PortfolioCardIcon src={PokeabilitiesIcon} alt="Pokéabilities icon" />
                         </div>
                         <PortfolioCardMainContentText>
-                            <PortfolioCardTitle>No Projects Im Busy</PortfolioCardTitle>
-                            <PortfolioCardDescription>Não há protótipo utilizando apenas HTML, CSS e Javascript puros de um site pessoal.</PortfolioCardDescription>
+                            <PortfolioCardTitle>Pokéabilities</PortfolioCardTitle>
+                            <PortfolioCardDescription>My second Pokédex ever built with Vue.js. </PortfolioCardDescription>
                         </PortfolioCardMainContentText>
                     </PortfolioCardMainContent>
 
                     <PortfolioCardBottomContent>
-                        <PortfolioBadge>Absolute</PortfolioBadge>
-                        <PortfolioBadge>Nothing</PortfolioBadge>
+                        <PortfolioBadge>Vue.js</PortfolioBadge>
+                        <PortfolioBadge>CSS</PortfolioBadge>
                     </PortfolioCardBottomContent>
                 </PortfolioCard>
 
                 <PortfolioCard>
                     <PortfolioCardMainContent>
                         <div>
-                            <PortfolioCardIcon />
+                            <PortfolioCardIcon src={XetIcon} alt="Xet icon" />
                         </div>
                         <PortfolioCardMainContentText>
-                            <PortfolioCardTitle>No Projects Im Busy</PortfolioCardTitle>
-                            <PortfolioCardDescription>Não há protótipo utilizando apenas HTML, CSS e Javascript puros de um site pessoal.</PortfolioCardDescription>
+                            <PortfolioCardTitle>Xet</PortfolioCardTitle>
+                            <PortfolioCardDescription>A web application that uses web sockets to schedule chats that got available for limited time.</PortfolioCardDescription>
                         </PortfolioCardMainContentText>
                     </PortfolioCardMainContent>
 
                     <PortfolioCardBottomContent>
-                        <PortfolioBadge>Absolute</PortfolioBadge>
-                        <PortfolioBadge>Nothing</PortfolioBadge>
+                        <PortfolioBadge>Socket.io</PortfolioBadge>
+                        <PortfolioBadge>Quasar.js</PortfolioBadge>
+                        <PortfolioBadge>Express.js</PortfolioBadge>
                     </PortfolioCardBottomContent>
                 </PortfolioCard>
             </PortfolioCardsWrapper>

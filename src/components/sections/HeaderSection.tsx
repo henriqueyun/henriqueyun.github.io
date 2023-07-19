@@ -12,6 +12,7 @@ const Header = styled.header`
         text-align: center;
     }
 `
+
 const HeaderTextWrapper = styled.span`
     display: flex;
     flex-direction: column;

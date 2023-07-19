@@ -91,14 +91,14 @@ function HobbiesSection() {
             image: VideogamesIcon
         },
         {
-            title: "SCIENCE",
-            description: "I'm a skpetical ever trying to practice the scientific thinking and that believes I am a skeptic who always seeks to exercise scientific thinking and who thinks that it is the way to improve our societies and therefore should be taught to everyone in the world",
-            image: ScienceIcon
-        },
-        {
             title: "LIVESTREAM",
             description: "I really enjoy watching livestream channels when I'm down, I enjoy watching illustration, gameplay, e-sports & coding channels; I've also done some lives coding some projects and I have plans to start creating some kind of content related to technology and programming",
             image: LivestreamIcon
+        },
+        {
+            title: "SCIENCE",
+            description: "I'm a skpetical ever trying to practice the scientific thinking and that believes I am a skeptic who always seeks to exercise scientific thinking and who thinks that it is the way to improve our societies and therefore should be taught to everyone in the world",
+            image: ScienceIcon
         },
         {
             title: "PIZZA",
