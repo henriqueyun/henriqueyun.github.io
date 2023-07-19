@@ -5,19 +5,22 @@ const Header = styled.header`
     display: flex;
     justify-content: space-between;
     width: 100%;
-    @media (max-width: 720px) {
+    @media (max-width: 768px) {
         width: 80%;
         flex-direction: column;
         gap: 32px;
         text-align: center;
     }
 `
+
 const HeaderTextWrapper = styled.span`
     display: flex;
     flex-direction: column;
     gap: 16px;
-    @media (max-width: 720px) {
+    width: 80%;
+    @media (max-width: 768px) {
         gap: 32px;
+        width: unset;
     }
 `
 
@@ -53,7 +56,7 @@ const HeaderButton = styled.a`
         color: red;
         border-color: red;
     }
-    @media (max-width: 720px) {
+    @media (max-width: 768px) {
         justify-content: center;
     }
 `
@@ -74,7 +77,7 @@ function HeaderSection() {
                     {' '}
                     <HighlightedHeaderText>Henrique Lima</HighlightedHeaderText>
                     {' '}
-                    and I help business and write code
+                    and I am an Full Stack Developer that write code to help business
                 </HeaderText>
                 <HeaderHeadline>
                     CHECK MY WORK BELOW
