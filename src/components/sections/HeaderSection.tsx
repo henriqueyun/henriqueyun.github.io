@@ -17,8 +17,10 @@ const HeaderTextWrapper = styled.span`
     display: flex;
     flex-direction: column;
     gap: 16px;
+    width: 80%;
     @media (max-width: 768px) {
         gap: 32px;
+        width: unset;
     }
 `
 
@@ -75,7 +77,7 @@ function HeaderSection() {
                     {' '}
                     <HighlightedHeaderText>Henrique Lima</HighlightedHeaderText>
                     {' '}
-                    and I help business and write code
+                    and I am an Full Stack Developer that write code to help business
                 </HeaderText>
                 <HeaderHeadline>
                     CHECK MY WORK BELOW

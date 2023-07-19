@@ -99,8 +99,8 @@ const NavMenuItems = [
     <NavMenuItem key="nav-menu-item-career" onClick={() => document.querySelector("#career-section")?.scrollIntoView({ behavior: 'smooth' })}>career</NavMenuItem>,
     <NavMenuItem key="nav-menu-item-skills" onClick={() => document.querySelector("#skills-section")?.scrollIntoView({ behavior: 'smooth' })}>skills</NavMenuItem>,
     <NavMenuItem key="nav-menu-item-hobbies" onClick={() => document.querySelector("#hobbies-section")?.scrollIntoView({ behavior: 'smooth' })}>hobbies</NavMenuItem>,
-    <NavMenuItem key="nav-menu-item-linkedin"><Icon src={LinkedinIcon} alt="Linkedin icon" /></NavMenuItem>,
-    <NavMenuItem key="nav-menu-item-github"><Icon src={GithubIcon} alt="Github icon" /></NavMenuItem>,
+    <a href="https://linkedin.com/in/henriqueyun" target="_blank" key="nav-menu-item-linkedin" rel="noreferrer"><NavMenuItem ><Icon src={LinkedinIcon} alt="Linkedin icon" /></NavMenuItem></a>,
+    <a href="https://github.com/henriqueyun" target="_blank" key="nav-menu-item-linkedin" rel="noreferrer"><NavMenuItem key="nav-menu-item-github"><Icon src={GithubIcon} alt="Github icon" /></NavMenuItem></a>,
 ]
 
 function Navbar() {
