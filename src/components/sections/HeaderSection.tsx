@@ -61,12 +61,7 @@ const HeaderButton = styled.a`
     }
 `
 
-import DownloadIcon from '../../assets/download.svg'
-
-const Icon = styled.img`
-    width: ${theme.font.size.action};
-    height: ${theme.font.size.action};
-`
+import DownloadIcon from '../../assets/download.svg?react'
 
 function HeaderSection() {
     return (
@@ -84,7 +79,7 @@ function HeaderSection() {
                 </HeaderHeadline>
             </HeaderTextWrapper>
             <HeaderButton target="_self" download="Currículo - Henrique Lima de Oliveira.pdf" href="/henriqueyun_curriculum_2023-06.pdf">
-                <Icon src={DownloadIcon} alt="Download icon" />
+                <DownloadIcon fill={theme.palette.primary} width={theme.font.size.action} height={theme.font.size.action}/>
                 Resume
             </HeaderButton>
         </Header>
