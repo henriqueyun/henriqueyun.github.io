@@ -82,12 +82,12 @@ function HobbiesSection() {
     const hobbies: Hobbie[] = [
         {
             title: "CHESS",
-            description: "I was introduced to chess in school by some classmates, I practiced it a little and I even was part of the school chess team by a while. Nowadays,  I used to keep up with world chess scenario, and sometimes I play as a casual player in chess.com",
+            description: "I was introduced to chess in school by some classmates, I practiced it a little and I even was part of the school chess team by a while. Nowadays,  I used to keep up with world chess scenario, and sometimes I play as a 1K elo bullet in chess.com",
             image: ChessIcon
         },
         {
             title: "VIDEOGAMES",
-            description: "I play videogames since I was a kid, the english that I know I have learned playing games and browsing on internet. I think that my favorite game of all times is Shadow of The Colossus and i've been playing Raft, Pokémon: Fire Red and Hollow Knight (2nd time)",
+            description: "I play videogames since I was a kid, the english that I know I have learned playing games and browsing on internet. My favorite game of all times is Shadow of The Colossus. I've just finished Pokémon: Fire Red and Hollow Knight (2nd time) and now I've been playing Ultra Street Fighter IV, Valorant, Castle Crashers and Pokémon: Soul Silver",
             image: VideogamesIcon
         },
         {
@@ -97,17 +97,17 @@ function HobbiesSection() {
         },
         {
             title: "SCIENCE",
-            description: "I'm a skpetical ever trying to practice the scientific thinking and that believes I am a skeptic who always seeks to exercise scientific thinking and who thinks that it is the way to improve our societies and therefore should be taught to everyone in the world",
+            description: "Since I discovered the scientific thinking/method I became a skeptic person, so on I try to be near of science news, exercise my own scientic thinking and encourage people to also do it",
             image: ScienceIcon
         },
         {
             title: "PIZZA",
-            description: "São Paulo, Brazil has a pretty cool pizza culture; pepperoni pizza is my favorite food since I was a kid so if you're going to ask me to eat it's definitely the right order",
+            description: "I live in São Paulo - SP, Brazil, and it has a pretty cool pizza culture; pepperoni pizza is my favorite food since I was a kid so if you're going to ask me to eat it's definitely the right order",
             image: PizzaIcon
         },
         {
             title: "ILLUSTRATION",
-            description: "I'm definitely not an illustrator, but since I was a kid I like to draw so every now and then I take time to doodle or watch some illustration content",
+            description: "I'm definitely not an illustrator, but I like to draw since I was a kid so every now and then I take time to doodle or watch some illustration content",
             image: IllustrationIcon
         }
     ]

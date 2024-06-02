@@ -21,11 +21,22 @@ import MicrosoftSQLIcon from '../../assets/microsoft-sql.svg'
 import MongoDBIcon from '../../assets/mongodb.png'
 import PostgreSQLIcon from '../../assets/postgres.png'
 
+const InternalSection = styled.section`
+    display: flex;
+    flex-flow: wrap column;
+    align-items: center;
+    gap: 32px;
+`
+
 const SkillsHeader = styled.h1`
     font-size: ${theme.font.size.title};
     font-weight: ${theme.font.weight.bold};
     text-align: center;
     color: ${theme.palette.primary};
+`
+
+const SkillsSubHeader = styled.p`
+    font-size: ${theme.font.size.content};
 `
 
 const SkillsDivisionWrapper = styled.ul`
@@ -84,8 +95,9 @@ function SkillsSection() {
     const [selectedDivision, setSelectedDivision] = useState(divisions[0])
 
     return (
-        <>
+        <InternalSection>
             <SkillsHeader id="skills-section">SKILLS</SkillsHeader>
+            <SkillsSubHeader>Change area selecting below</SkillsSubHeader>
             <SkillsDivisionWrapper>
                 <SkillsDivisionTitlesWrapper>
                     {divisions.map(division => (
@@ -158,7 +170,7 @@ function SkillsSection() {
                     )
                 }
             </SkillsDivisionWrapper>
-        </>
+        </InternalSection>
     );
 }
 

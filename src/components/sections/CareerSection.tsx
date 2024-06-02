@@ -1,6 +1,7 @@
 import theme from '../../theme'
 import { styled } from "styled-components"
 
+import KenloIcon from '../../assets/kenlo.png'
 import ZRPIcon from '../../assets/zrp.png'
 import iColaboraIcon from '../../assets/icolabora.png'
 import InputIcon from '../../assets/input.png'
@@ -32,7 +33,8 @@ const CareerJobCard = styled.div`
 `
 
 const CareerCompanyIcon = styled.img`
-    height: 128px;
+    max-height: 128px;
+    max-width: 128px;
 `
 
 const CareerJobCardContent = styled.span`
@@ -76,6 +78,19 @@ function CareerSection() {
         <>
             <CareerJobCardWrapper>
                 <CareerHeader id="career-section">CAREER</CareerHeader>
+                <CareerJobCard>
+                    <CareerCompanyIcon src={KenloIcon} />
+                    <CareerJobCardContent>
+                        <CareerCompanyTitle>Kenlo</CareerCompanyTitle>
+                        <CareerPositionTitle>Full-stack Developer</CareerPositionTitle>
+                        <CareerPositionTimeInterval>
+                            [Dec/23 - Now]
+                        </CareerPositionTimeInterval>
+                        <CareerPositionDescription>
+                        Works in one of the most used real state softwares of the country: IMOB. Using mainly .NET, Javascript and HTML + CSS to perform backend/frontend tasks for development of existing and new features
+                        </CareerPositionDescription>
+                    </CareerJobCardContent>
+                </CareerJobCard>
                 <CareerJobCard>
                     <CareerCompanyIcon src={ZRPIcon} />
                     <CareerJobCardContent>
