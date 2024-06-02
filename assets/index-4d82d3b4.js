@@ -185,7 +185,7 @@ Error generating stack: `+o.message+`
     @media (max-width: 768px) {
         justify-content: center;
     }
-`;function cg(){return p.jsxs(rg,{children:[p.jsxs(ig,{children:[p.jsx(og,{children:p.jsxs(lg,{children:["My name is"," ",p.jsx(sg,{children:"Henrique Lima"})," ","and I help business and write code, I am a Full-stack Developer that can delivery sites, services and apps from conception and design to users in production"]})}),p.jsxs(ag,{target:"_self",download:"Currículo - Henrique Lima de Oliveira.pdf",href:"/henriqueyun_curriculum_2023-06.pdf",children:[p.jsx(ng,{fill:C.palette.primary,width:C.font.size.action,height:C.font.size.action}),"Resume"]})]}),p.jsx(ug,{children:"READ ABOUT ME AND MY WORK BELOW ↓"})]})}const fg="/assets/ararastore-c1a061ed.png",dg="/assets/movies-36aa1a7c.png",pg="/assets/pokeabilities-df0dd18e.png",hg="/assets/xet-79c2fb67.png",mg=z.h1`
+`;function cg(){return p.jsxs(rg,{children:[p.jsxs(ig,{children:[p.jsx(og,{children:p.jsxs(lg,{children:["My name is"," ",p.jsx(sg,{children:"Henrique Lima"})," ","and I help business and write code, I am a Full-stack Developer that can delivery sites, services and apps from conception and design to users in production"]})}),p.jsxs(ag,{target:"_self",download:"Currículo - Henrique Lima de Oliveira.pdf",href:"/curriculum-henrique-lima.pdf",children:[p.jsx(ng,{fill:C.palette.primary,width:C.font.size.action,height:C.font.size.action}),"Resume"]})]}),p.jsx(ug,{children:"READ ABOUT ME AND MY WORK BELOW ↓"})]})}const fg="/assets/ararastore-c1a061ed.png",dg="/assets/movies-36aa1a7c.png",pg="/assets/pokeabilities-df0dd18e.png",hg="/assets/xet-79c2fb67.png",mg=z.h1`
     font-size: ${C.font.size.title};
     font-weight: ${C.font.weight.bold};
     text-align: center;
