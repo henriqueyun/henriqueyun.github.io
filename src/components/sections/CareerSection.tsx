@@ -33,7 +33,7 @@ const CareerJobCard = styled.div`
 `
 
 const CareerCompanyIcon = styled.img`
-    max-height: 128px;
+    max-height: 160px;
     max-width: 128px;
 `
 
