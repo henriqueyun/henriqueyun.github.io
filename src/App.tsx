@@ -8,7 +8,7 @@ import CareerSection from './components/sections/CareerSection'
 import SkillsSection from './components/sections/SkillsSection'
 
 const AppWrapper = styled.div`
-	background: center center; 
+	background: center center fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;

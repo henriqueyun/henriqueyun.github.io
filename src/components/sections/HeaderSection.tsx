@@ -3,6 +3,20 @@ import { styled } from 'styled-components'
 
 const Header = styled.header`
     display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    gap: 64px;
+    width: 100%;
+    @media (max-width: 768px) {
+        width: 80%;
+        flex-direction: column;
+        gap: 48px;
+        text-align: center;
+    }
+`
+
+const HeaderTop = styled.section`
+    display: flex;
     justify-content: space-between;
     width: 100%;
     @media (max-width: 768px) {
@@ -26,6 +40,13 @@ const HeaderTextWrapper = styled.span`
 
 const HeaderText = styled.p`
     font-size: ${theme.font.size.highlight};
+    line-height: 32px;
+    text-align: justify;
+    @media (max-width: 768px) {
+        font-size: ${theme.font.size.content};
+        gap: 20px;
+        width: unset;
+    }
 `
 
 const HighlightedHeaderText = styled.b`
@@ -50,7 +71,7 @@ const HeaderButton = styled.a`
     align-items: center;
     gap: 12px;
     &:hover {
-        background-color: rgba(238, 68, 68, 0.1);
+        background-color: rgba(0, 87, 189, 0.25);
     }
     &:active {
         color: red;
@@ -66,22 +87,24 @@ import DownloadIcon from '../../assets/download.svg?react'
 function HeaderSection() {
     return (
         <Header>
+            <HeaderTop>
             <HeaderTextWrapper>
                 <HeaderText>
-                    My name is
+                    My name is 
                     {' '}
                     <HighlightedHeaderText>Henrique Lima</HighlightedHeaderText>
                     {' '}
-                    and I am an Full Stack Developer that write code to help business
+                    and I help business and write code, I am a Full-stack Developer that can delivery sites, services and apps from conception and design to users in production
                 </HeaderText>
-                <HeaderHeadline>
-                    CHECK MY WORK BELOW
-                </HeaderHeadline>
             </HeaderTextWrapper>
             <HeaderButton target="_self" download="Currículo - Henrique Lima de Oliveira.pdf" href="/henriqueyun_curriculum_2023-06.pdf">
                 <DownloadIcon fill={theme.palette.primary} width={theme.font.size.action} height={theme.font.size.action}/>
                 Resume
             </HeaderButton>
+            </HeaderTop>
+            <HeaderHeadline>
+                READ ABOUT ME AND MY WORK BELOW ↓ 
+            </HeaderHeadline>
         </Header>
     );
 }

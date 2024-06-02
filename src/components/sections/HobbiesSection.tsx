@@ -15,11 +15,22 @@ interface Hobbie {
     image: string
 }
 
+const InternalSection = styled.section`
+    display: flex;
+    flex-flow: wrap column;
+    align-items: center;
+    gap: 32px;
+`
+
 const HobbiesHeader = styled.h1`
     font-size: ${theme.font.size.title};
     font-weight: ${theme.font.weight.bold};
     text-align: center;
     color: ${theme.palette.primary};
+`
+
+const HobbiesSubheader = styled.p`
+    font-size: ${theme.font.size.content};
 `
 
 const HobbiesWrapper = styled.section`
@@ -117,8 +128,9 @@ function HobbiesSection() {
     const uppercaseFirstLetter = (text: string): string => text.charAt(0) + text.slice(1, text.length - 1)
 
     return (
-        <>
+        <InternalSection>
             <HobbiesHeader id="hobbies-section">HOBBIES</HobbiesHeader>
+            <HobbiesSubheader>Select below to see the hobby description</HobbiesSubheader>
             <HobbiesWrapper>
                 <HobbiesIconWrapper>
                     {hobbies.map((hobbie: Hobbie) => (
@@ -132,7 +144,7 @@ function HobbiesSection() {
                     {selectedHobbieDescription}
                 </HighlightedHobbieDescription>
             </HobbiesWrapper>
-        </>
+        </InternalSection>
     );
 }
 

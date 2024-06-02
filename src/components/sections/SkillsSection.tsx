@@ -83,10 +83,10 @@ const Skill = styled.img`
 `
 
 const SkillBg = styled.span`
-    background-color: ${theme.palette.primary};
     padding: 8px;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(0, 87, 189, 0.75);
+    border: solid 10px ${theme.palette.primary}
 `
 
 function SkillsSection() {
@@ -97,7 +97,7 @@ function SkillsSection() {
     return (
         <InternalSection>
             <SkillsHeader id="skills-section">SKILLS</SkillsHeader>
-            <SkillsSubHeader>Change area selecting below</SkillsSubHeader>
+            <SkillsSubHeader>Select below to see area related skills</SkillsSubHeader>
             <SkillsDivisionWrapper>
                 <SkillsDivisionTitlesWrapper>
                     {divisions.map(division => (
