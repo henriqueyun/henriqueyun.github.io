@@ -27,7 +27,7 @@ const PortfolioCardsWrapper = styled.div`
 `
 
 const PortfolioCard = styled.div`
-    background-image: linear-gradient(to right, rgba(40, 40, 40, 0.25), rgba(160, 80, 80, 0.25));
+    background-image: linear-gradient(to right, rgba(40, 40, 40, 0.25), rgba(0, 87, 189, 0.25));
     backdrop-filter: blur(4px);
     display: flex;
     flex-direction: column;

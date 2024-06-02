@@ -2,9 +2,9 @@ import theme from '../theme'
 import { styled } from "styled-components";
 import { useState } from "react";
 
-import GithubIcon from '../assets/github.svg'
-import LinkedinIcon from '../assets/linkedin.svg'
-import HamburguerIcon from '../assets/hamburguer.svg'
+import GithubIcon from '../assets/github.svg?react'
+import LinkedinIcon from '../assets/linkedin.svg?react'
+import HamburguerIcon from '../assets/hamburguer.svg?react'
 
 const Nav = styled.nav`
     display: flex;
@@ -52,7 +52,7 @@ const DrawerWrapper = styled.div`
     flex-direction: column;
 `
 
-const DrawerToggler = styled.button<{ $display?: boolean;}>`
+const DrawerToggler = styled.button<{ $display?: boolean; }>`
     display: none;
     @media (max-width: 768px) {
         display: ${props => props.$display ? 'flex' : 'none'};
@@ -63,7 +63,7 @@ const DrawerToggler = styled.button<{ $display?: boolean;}>`
     }
 `
 
-const MobileDrawerNavMenu = styled.ul<{ $display?: boolean;}>`
+const MobileDrawerNavMenu = styled.ul<{ $display?: boolean; }>`
     display: none;
     @media (max-width: 768px) {
         display: ${props => props.$display ? 'flex' : 'none'};
@@ -90,17 +90,21 @@ const NavMenuItem = styled.li`
     cursor: pointer;
 `
 
-const Icon = styled.img`
-    width: ${theme.font.size.highlight};
-`
-
 const NavMenuItems = [
     <NavMenuItem key="nav-menu-item-portfolio" onClick={() => document.querySelector("#portfolio-section")?.scrollIntoView({ behavior: 'smooth' })}>portfolio</NavMenuItem>,
     <NavMenuItem key="nav-menu-item-career" onClick={() => document.querySelector("#career-section")?.scrollIntoView({ behavior: 'smooth' })}>career</NavMenuItem>,
     <NavMenuItem key="nav-menu-item-skills" onClick={() => document.querySelector("#skills-section")?.scrollIntoView({ behavior: 'smooth' })}>skills</NavMenuItem>,
     <NavMenuItem key="nav-menu-item-hobbies" onClick={() => document.querySelector("#hobbies-section")?.scrollIntoView({ behavior: 'smooth' })}>hobbies</NavMenuItem>,
-    <a href="https://linkedin.com/in/henriqueyun" target="_blank" key="nav-menu-item-linkedin" rel="noreferrer"><NavMenuItem ><Icon src={LinkedinIcon} alt="Linkedin icon" /></NavMenuItem></a>,
-    <a href="https://github.com/henriqueyun" target="_blank" key="nav-menu-item-linkedin" rel="noreferrer"><NavMenuItem key="nav-menu-item-github"><Icon src={GithubIcon} alt="Github icon" /></NavMenuItem></a>,
+    <a href="https://linkedin.com/in/henriqueyun" target="_blank" key="nav-menu-item-linkedin" rel="noreferrer">
+        <NavMenuItem >
+            <LinkedinIcon color={theme.palette.primary} width={theme.font.size.highlight} />
+        </NavMenuItem>
+    </a>,
+    <a href="https://github.com/henriqueyun" target="_blank" key="nav-menu-item-github" rel="noreferrer">
+        <NavMenuItem key="nav-menu-item-github">
+            <GithubIcon color={theme.palette.primary} width={theme.font.size.highlight} />
+        </NavMenuItem>
+    </a>,
 ]
 
 function Navbar() {
@@ -113,8 +117,8 @@ function Navbar() {
                 <Logotype>HENRIQUEYUN</Logotype>
             </LogotypeLink>
             <DrawerWrapper>
-                <DrawerToggler onClick={() => setDisplayNavItems(!displayNavItems)} $display={displayNavItems}><img src={HamburguerIcon} alt="Hamburguer icon" /></DrawerToggler>
-                <MobileDrawerNavMenu $display={displayNavItems}>
+                <DrawerToggler onClick={() => setDisplayNavItems(!displayNavItems)} $display={displayNavItems}><HamburguerIcon fill={theme.palette.primary} /></DrawerToggler>
+                <MobileDrawerNavMenu $display={displayNavItems}> 
                     {NavMenuItems.map(navMenuItem => navMenuItem)}
                 </MobileDrawerNavMenu>
                 <DrawerNavMenu>
