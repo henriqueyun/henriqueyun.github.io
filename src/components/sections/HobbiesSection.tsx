@@ -31,6 +31,7 @@ const HobbiesHeader = styled.h1`
 
 const HobbiesSubheader = styled.p`
     font-size: ${theme.font.size.content};
+    text-align: center;
 `
 
 const HobbiesWrapper = styled.section`
