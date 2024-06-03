@@ -37,6 +37,7 @@ const SkillsHeader = styled.h1`
 
 const SkillsSubHeader = styled.p`
     font-size: ${theme.font.size.content};
+    text-align: center;
 `
 
 const SkillsDivisionWrapper = styled.ul`
