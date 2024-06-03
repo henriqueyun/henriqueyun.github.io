@@ -74,8 +74,8 @@ const HeaderButton = styled.a`
         background-color: rgba(0, 87, 189, 0.25);
     }
     &:active {
-        color: red;
-        border-color: red;
+        color: white;
+        border-color: white;
     }
     @media (max-width: 768px) {
         justify-content: center;
@@ -97,7 +97,7 @@ function HeaderSection() {
                     and I help business and write code, I am a Full-stack Developer that can delivery sites, services and apps from conception and design to users in production
                 </HeaderText>
             </HeaderTextWrapper>
-            <HeaderButton target="_self" download="Currículo - Henrique Lima de Oliveira.pdf" href="/henriqueyun_curriculum_2023-06.pdf">
+            <HeaderButton target="_self" download="Currículo - Henrique Lima de Oliveira.pdf" href="/curriculum-henrique-lima.pdf">
                 <DownloadIcon fill={theme.palette.primary} width={theme.font.size.action} height={theme.font.size.action}/>
                 Resume
             </HeaderButton>
