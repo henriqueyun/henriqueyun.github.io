@@ -308,6 +308,7 @@ Error generating stack: `+o.message+`
     color: ${C.palette.primary};
 `,Og=z.p`
     font-size: ${C.font.size.content};
+    text-align: center;
 `,Mg=z.section`
     display: flex;
     flex-direction: column;
@@ -363,6 +364,7 @@ Error generating stack: `+o.message+`
     color: ${C.palette.primary};
 `,l0=z.p`
     font-size: ${C.font.size.content};
+    text-align: center;
 `,s0=z.ul`
     display: flex;
     flex-direction: column;
