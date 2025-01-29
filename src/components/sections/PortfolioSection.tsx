@@ -104,7 +104,7 @@ function PortfolioSection() {
                         </div>
                         <PortfolioCardMainContentText>
                             <PortfolioCardTitle>Ararastore</PortfolioCardTitle>
-                            <PortfolioCardDescription>This was my college final project. It&apos;s a fashion e-commerce focused on early entrepeneurs to make they products available online</PortfolioCardDescription>
+                            <PortfolioCardDescription>This was my college final project. It&apos;s a fashion e-commerce that has focus on early entrepeneurs. I participated of the entire process of development including design, front end development, database modeling and back end development.</PortfolioCardDescription>
                         </PortfolioCardMainContentText>
                     </PortfolioCardMainContent>
 
@@ -122,7 +122,7 @@ function PortfolioSection() {
                         </div>
                         <PortfolioCardMainContentText>
                             <PortfolioCardTitle>The Movies API</PortfolioCardTitle>
-                            <PortfolioCardDescription>It&apos;s user interface built with React.js that consumes The Movies API. It uses pure CSS only and has features like search and pagination</PortfolioCardDescription>
+                            <PortfolioCardDescription>It&apos;s user interface built with React.js that consumes The Movies API for looking for movies. It uses pure CSS only and has simple features like search and pagination. Built as a Technical Challenge.</PortfolioCardDescription>
                         </PortfolioCardMainContentText>
                     </PortfolioCardMainContent>
 
@@ -141,7 +141,7 @@ function PortfolioSection() {
                         </div>
                         <PortfolioCardMainContentText>
                             <PortfolioCardTitle>Pokéabilities</PortfolioCardTitle>
-                            <PortfolioCardDescription>My second Pokédex ever built with Vue.js. </PortfolioCardDescription>
+                            <PortfolioCardDescription>My second Pokédex ever built with Vue.js. I am a developer so I must have built something using the Pokémon Public Web API, right? In this app. you can look for a Pokémon and see it abilities. Built as a Technical Challenge.</PortfolioCardDescription>
                         </PortfolioCardMainContentText>
                     </PortfolioCardMainContent>
 
@@ -158,7 +158,7 @@ function PortfolioSection() {
                         </div>
                         <PortfolioCardMainContentText>
                             <PortfolioCardTitle>Xet</PortfolioCardTitle>
-                            <PortfolioCardDescription>A web application that uses web sockets to schedule chats that got available for limited time.</PortfolioCardDescription>
+                            <PortfolioCardDescription>Personal project where I made a simple web application that uses web sockets to make chat that can be accessed through a browser. As a challenge I added the feature that chats got available for a limited amount of time.</PortfolioCardDescription>
                         </PortfolioCardMainContentText>
                     </PortfolioCardMainContent>
 

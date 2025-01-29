@@ -6,7 +6,7 @@ import ChessIcon from '../../assets/chess.png'
 import VideogamesIcon from '../../assets/videogame.png'
 import ScienceIcon from '../../assets/science.png'
 import LivestreamIcon from '../../assets/livestream.png'
-import PizzaIcon from '../../assets/pizza.png'
+import FoodIcon from '../../assets/pizza.png'
 import IllustrationIcon from '../../assets/illustration.png'
 
 interface Hobbie {
@@ -94,17 +94,17 @@ function HobbiesSection() {
     const hobbies: Hobbie[] = [
         {
             title: "CHESS",
-            description: "I was introduced to chess in school by some classmates, I practiced it a little and I even was part of the school chess team by a while. Nowadays,  I used to keep up with world chess scenario, and sometimes I play as a 1K elo bullet in chess.com",
+            description: "I was introduced to chess in school by some classmates, I practiced it a little and I even was part of the school chess team by a while. Nowadays,  I used to keep up with world chess scenario and still play sometimes. I am currently trying to play more rapid (10 + 0) instead of bullet games",
             image: ChessIcon
         },
         {
             title: "VIDEOGAMES",
-            description: "I play videogames since I was a kid, the english that I know I have learned playing games and browsing on internet. My favorite game of all times is Shadow of The Colossus. I've just finished Pokémon: Fire Red and Hollow Knight (2nd time) and now I've been playing Ultra Street Fighter IV, Valorant, Castle Crashers and Pokémon: Soul Silver",
+            description: "I play videogames since I was a kid, the english that I know I have learned playing games and browsing on internet. My favorite game of all times is Shadow of The Colossus. I've just finished Grand Theft Auto V, Monster Hunter Rise: Sunbreak (DLC) and Pokémon: Soul Silver and now I've been playing Snake Pass, Donkey Kong Country and Trials Fusion",
             image: VideogamesIcon
         },
         {
             title: "LIVESTREAM",
-            description: "I really enjoy watching livestream channels when I'm down, I enjoy watching illustration, gameplay, e-sports & coding channels; I've also done some lives coding some projects and I have plans to start creating some kind of content related to technology and programming",
+            description: "I really enjoy watching livestream channels when I'm down, I enjoy watching illustration, gameplay, e-sports & coding channels; I've also done some lives coding some projects and I have projects related to content creation",
             image: LivestreamIcon
         },
         {
@@ -113,13 +113,13 @@ function HobbiesSection() {
             image: ScienceIcon
         },
         {
-            title: "PIZZA",
-            description: "I live in São Paulo - SP, Brazil, and it has a pretty cool pizza culture; pepperoni pizza is my favorite food since I was a kid so if you're going to ask me to eat it's definitely the right order",
-            image: PizzaIcon
+            title: "FOOD",
+            description: "I live in São Paulo - SP, Brazil, and it has a pretty cool pizza culture; pepperoni pizza is my favorite food since I was a kid so if you're going to ask me to eat it's definitely the right order. I also like Ramen and Sushi",
+            image: FoodIcon
         },
         {
             title: "ILLUSTRATION",
-            description: "I'm definitely not an illustrator, but I like to draw since I was a kid so every now and then I take time to doodle or watch some illustration content",
+            description: "I'm definitely not an illustrator, but I really enjoy to draw since I was a kid so every now and then I take time to doodle, draw and play with pen, pencils and papers",
             image: IllustrationIcon
         }
     ]

@@ -17,7 +17,7 @@ const CareerJobCardWrapper = styled.section`
     display: flex;
     flex-direction: column;
     gap: 72px;
-`    
+`
 
 const CareerJobCard = styled.div`
     display: flex;
@@ -63,7 +63,7 @@ const CareerPositionTimeInterval = styled.h3`
     }
 `
 
-const CareerPositionDescription = styled.p`
+const CareerPositionDescription = styled.span`
     font-size: ${theme.font.size.highlight};
     color: ${theme.palette.text.secondary};
     @media (max-width: 768px) {
@@ -72,67 +72,95 @@ const CareerPositionDescription = styled.p`
     }
 `
 
+const CareerPositionDescriptionBulletPoint = styled.p`
+    padding-bottom: 16px;
+`
+
 function CareerSection() {
 
     return (
-        <>
-            <CareerJobCardWrapper>
-                <CareerHeader id="career-section">CAREER</CareerHeader>
-                <CareerJobCard>
-                    <CareerCompanyIcon src={KenloIcon} />
-                    <CareerJobCardContent>
-                        <CareerCompanyTitle>Kenlo</CareerCompanyTitle>
-                        <CareerPositionTitle>Full-stack Developer</CareerPositionTitle>
-                        <CareerPositionTimeInterval>
-                            [Dec/23 - Now]
-                        </CareerPositionTimeInterval>
-                        <CareerPositionDescription>
-                        Works in one of the most used real state softwares of the country: IMOB. Using mainly .NET, Javascript and HTML + CSS to perform backend/frontend tasks for development of existing and new features
-                        </CareerPositionDescription>
-                    </CareerJobCardContent>
-                </CareerJobCard>
-                <CareerJobCard>
-                    <CareerCompanyIcon src={ZRPIcon} />
-                    <CareerJobCardContent>
-                        <CareerCompanyTitle>ZRP</CareerCompanyTitle>
-                        <CareerPositionTitle>Full-stack Developer</CareerPositionTitle>
-                        <CareerPositionTimeInterval>
-                            [Apr/22 - May/23]
-                        </CareerPositionTimeInterval>
-                        <CareerPositionDescription>
-                            Acted in different projects using Node.js, React.js and Material UI; including a Twilio Chatbot 
-                            integrated to a Node.js API (Strapi); along the projects has also had experiences with Serverless 
-                            Framework (AWS Lambda), Typescript, Nest.js, TypeORM, Jest and more
-                        </CareerPositionDescription>
-                    </CareerJobCardContent>
-                </CareerJobCard>
-                <CareerJobCard>
-                    <CareerCompanyIcon src={iColaboraIcon} />
-                    <CareerJobCardContent>
-                        <CareerCompanyTitle>iColabora</CareerCompanyTitle>
-                        <CareerPositionTitle>Junior Programmer Analyst</CareerPositionTitle>
-                        <CareerPositionTimeInterval> [Nov/19 - Apr/22]</CareerPositionTimeInterval>
-                        <CareerPositionDescription>
-                            Had worked with Turbina, a BPMS, developing new processes and features through the 
-                            application (using Vue.js, Javascript, HTML & CSS). Had also built and worked on backend APIs 
-                            using Node.js.
-                        </CareerPositionDescription>
-                    </CareerJobCardContent>
-                </CareerJobCard>
-                <CareerJobCard>
-                    <CareerCompanyIcon src={InputIcon} />
-                    <CareerJobCardContent>
-                        <CareerCompanyTitle>Input Tecnologia</CareerCompanyTitle>
-                        <CareerPositionTitle>Software Development Intern</CareerPositionTitle> 
-                        <CareerPositionTimeInterval>[Apr/19 - Nov/19]</CareerPositionTimeInterval>
-                        <CareerPositionDescription>
-                            Developed and maintained different ERP systems but acting mainly in the company Hospital System (WinHosp), using the Clarion IDE/Language connected with Microsoft SQL Server Databases.
-                        </CareerPositionDescription>
-                    </CareerJobCardContent>
-                </CareerJobCard>
-            </CareerJobCardWrapper>
-        </>
-    );
+        <CareerJobCardWrapper>
+            <CareerHeader id="career-section">CAREER</CareerHeader>
+            <CareerJobCard>
+                <CareerCompanyIcon src={KenloIcon} />
+                <CareerJobCardContent>
+                    <CareerCompanyTitle>Kenlo</CareerCompanyTitle>
+                    <CareerPositionTitle>Full-stack Developer</CareerPositionTitle>
+                    <CareerPositionTimeInterval>
+                        [Dec/23 - Now]
+                    </CareerPositionTimeInterval>
+                    <CareerPositionDescription>
+                        <CareerPositionDescriptionBulletPoint>
+                            - Works on the IMOB team, a system used by over 10,000 real estate agencies, to implement new functionalities using React, Node, and .NET 4.8, as well as maintaining existing features;
+                        </CareerPositionDescriptionBulletPoint>
+                        <CareerPositionDescriptionBulletPoint>
+                            - Develops integrated services for IMOB, including the customers search service, using Node, Elasticsearch, Kibana, and MongoDB;
+                        </CareerPositionDescriptionBulletPoint>
+                        <CareerPositionDescriptionBulletPoint>
+                            - Contributed to the insurance team by automating customers mailing through a batch job using Serverless Framework integrated with an internal email service.
+                        </CareerPositionDescriptionBulletPoint>
+                    </CareerPositionDescription>
+                </CareerJobCardContent>
+            </CareerJobCard>
+            <CareerJobCard>
+                <CareerCompanyIcon src={ZRPIcon} />
+                <CareerJobCardContent>
+                    <CareerCompanyTitle>ZRP</CareerCompanyTitle>
+                    <CareerPositionTitle>Full-stack Developer</CareerPositionTitle>
+                    <CareerPositionTimeInterval>
+                        [Apr/22 - May/23]
+                    </CareerPositionTimeInterval>
+                    <CareerPositionDescription>
+                        <CareerPositionDescriptionBulletPoint>
+                            - Participated in the delivery of a product registration application for a giveaway. Collaborated on creating a chatbot using Twilio integrated with a Strapi instance, aimed at registering participants products via images using Amazon Textract;
+                        </CareerPositionDescriptionBulletPoint>
+                        <CareerPositionDescriptionBulletPoint>
+                            - Contributed to an internal culture management application with React and Nest, developing end-to-end functionalities related to career path management;
+                        </CareerPositionDescriptionBulletPoint>
+                        <CareerPositionDescriptionBulletPoint>
+                            - Supported a startup app project using React Native and Node, adjusting user interfaces, fixing Bluetooth connectivity bugs, and implementing geolocation data processing algorithms using Danfo.js.
+                        </CareerPositionDescriptionBulletPoint>
+                    </CareerPositionDescription>
+                </CareerJobCardContent>
+            </CareerJobCard>
+            <CareerJobCard>
+                <CareerCompanyIcon src={iColaboraIcon} />
+                <CareerJobCardContent>
+                    <CareerCompanyTitle>iColabora</CareerCompanyTitle>
+                    <CareerPositionTitle>Junior Programmer Analyst</CareerPositionTitle>
+                    <CareerPositionTimeInterval> [Nov/19 - Apr/22]</CareerPositionTimeInterval>
+                    <CareerPositionDescription>
+                        <CareerPositionDescriptionBulletPoint>
+                            - Worked on developing CRM processes and forms in Turbina BPMN (Activiti fork);
+                        </CareerPositionDescriptionBulletPoint>
+                        <CareerPositionDescriptionBulletPoint>
+                            - Developed user interfaces primarily using HTML, CSS, Bootstrap, JavaScript, and Vue 2;
+                        </CareerPositionDescriptionBulletPoint>
+                        <CareerPositionDescriptionBulletPoint>
+                            - Developed backend and ETL services mainly using Node (Sequelize ORM, ES6) and also has minor contributions for Java projects;
+                        </CareerPositionDescriptionBulletPoint>
+                        - Utilized data streams (SQL with templates) to persist data to user forms.
+                    </CareerPositionDescription>
+                </CareerJobCardContent>
+            </CareerJobCard>
+            <CareerJobCard>
+                <CareerCompanyIcon src={InputIcon} />
+                <CareerJobCardContent>
+                    <CareerCompanyTitle>Input Tecnologia</CareerCompanyTitle>
+                    <CareerPositionTitle>Software Development Intern</CareerPositionTitle>
+                    <CareerPositionTimeInterval>[Apr/19 - Nov/19]</CareerPositionTimeInterval>
+                    <CareerPositionDescription>
+                        <CareerPositionDescriptionBulletPoint>
+                            - Used Clarion IDE/Language to create screens with different functionalities for applications in the Hospital, Educational and other sectors;
+                        </CareerPositionDescriptionBulletPoint>
+                        <CareerPositionDescriptionBulletPoint>
+                            - Had contact with ASP.NET applications used for web projects.
+                        </CareerPositionDescriptionBulletPoint>
+                    </CareerPositionDescription>
+                </CareerJobCardContent>
+            </CareerJobCard>
+        </CareerJobCardWrapper>
+    )
 }
 
 export default CareerSection;
