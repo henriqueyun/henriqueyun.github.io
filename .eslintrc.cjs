@@ -14,7 +14,6 @@ module.exports = {
     'react/jsx-indent': ['warn', 4],
     'react/jsx-max-props-per-line': ['warn', { 'when': 'multiline'}],
     'react/jsx-curly-spacing': ['warn', { 'children': true  }],
-    'react-refresh/only-export-components': 'warn',
     'react/jsx-wrap-multilines': ['warn', {
       'declaration': 'parens-new-line',
       'assignment': 'parens-new-line',
