@@ -76,6 +76,14 @@ const CareerPositionDescriptionBulletPoint = styled.p`
     padding-bottom: 16px;
 `
 
+const CareerPositionKeyTechnology = styled.p`
+    font-size: ${theme.font.size.highlight};
+    color: ${theme.palette.text.primary};
+    @media (max-width: 768px) {
+        text-align: justify;
+        font-size: ${theme.font.size.content};
+    }
+`
 function CareerSection() {
 
     return (
@@ -102,6 +110,10 @@ function CareerSection() {
                             - Contributed to the insurance team by automating customers mailing through a batch job using Serverless Framework integrated with an internal email service.
                         </CareerPositionDescriptionBulletPoint>
                     </CareerPositionDescription>
+                    <CareerPositionKeyTechnology>
+                        Key technologies: React, Node (Typescript), .NET, Serverless Framework, Jest,
+                        MongoDB.
+                    </CareerPositionKeyTechnology>
                 </CareerJobCardContent>
             </CareerJobCard>
             <CareerJobCard>
@@ -125,6 +137,10 @@ function CareerSection() {
                             - Supported a startup app project using React Native and Node, adjusting user interfaces, fixing Bluetooth connectivity bugs, and implementing geolocation data processing algorithms using Danfo.js.
                         </CareerPositionDescriptionBulletPoint>
                     </CareerPositionDescription>
+                    <CareerPositionKeyTechnology>
+                        Key technologies: React, Node (Typescript), .NET, Serverless Framework, Jest,
+                        MongoDB.
+                    </CareerPositionKeyTechnology>
                 </CareerJobCardContent>
             </CareerJobCard>
             <CareerJobCard>
@@ -147,6 +163,10 @@ function CareerSection() {
                         </CareerPositionDescriptionBulletPoint>
                         - Utilized data streams (SQL with templates) to persist data to user forms.
                     </CareerPositionDescription>
+                    <CareerPositionKeyTechnology>
+                        Key technologies: Node (Typescript), React, Serverless Framework, Nest, Jest,
+                        Material UI, RDS, SQS, SQL, MongoDB e Redis.
+                    </CareerPositionKeyTechnology>
                 </CareerJobCardContent>
             </CareerJobCard>
             <CareerJobCard>
@@ -163,6 +183,9 @@ function CareerSection() {
                             - Had contact with ASP.NET applications used for web projects.
                         </CareerPositionDescriptionBulletPoint>
                     </CareerPositionDescription>
+                    <CareerPositionKeyTechnology>
+                        Key technologies: Vue, HTML, CSS, Javascript, Node, Bootstrap, SQL.
+                    </CareerPositionKeyTechnology>
                 </CareerJobCardContent>
             </CareerJobCard>
         </CareerJobCardWrapper>
