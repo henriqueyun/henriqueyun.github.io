@@ -16,7 +16,7 @@ function Footerbar() {
 
     return (
         <Footer>
-            henriqueyun 2023® All Rights Reserved
+            henriqueyun 2025® All Rights Reserved
         </Footer>
     );
 }
