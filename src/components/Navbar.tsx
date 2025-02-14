@@ -18,14 +18,6 @@ const Nav = styled.nav`
     li:hover {
         color: ${theme.palette.primary};
     }
-    li > img {
-        border: solid transparent;
-        border-width: 0 0 2px 0; 
-        padding: 0 0 2px 0;
-        &:hover {
-            border-color: white;
-        }
-    }
     @media (max-width: 768px) {
             flex-direction: column;
             padding: 48px 32px 32px 32px;
@@ -88,6 +80,11 @@ const NavMenuItem = styled.li`
     font-size: ${theme.font.size.highlight};
     font-family: ${theme.font.family.title};
     cursor: pointer;
+    svg {
+        &:hover {
+            fill: white;
+        }
+    }
 `
 
 const NavMenuItems = [
@@ -96,12 +93,12 @@ const NavMenuItems = [
     <NavMenuItem key="nav-menu-item-skills" onClick={() => document.querySelector("#skills-section")?.scrollIntoView({ behavior: 'smooth' })}>skills</NavMenuItem>,
     <NavMenuItem key="nav-menu-item-hobbies" onClick={() => document.querySelector("#hobbies-section")?.scrollIntoView({ behavior: 'smooth' })}>hobbies</NavMenuItem>,
     <a href="https://linkedin.com/in/henriqueyun" target="_blank" key="nav-menu-item-linkedin" rel="noreferrer">
-        <NavMenuItem >
+        <NavMenuItem>
             <LinkedinIcon color={theme.palette.primary} width={theme.font.size.highlight} />
         </NavMenuItem>
     </a>,
     <a href="https://github.com/henriqueyun" target="_blank" key="nav-menu-item-github" rel="noreferrer">
-        <NavMenuItem key="nav-menu-item-github">
+        <NavMenuItem>
             <GithubIcon color={theme.palette.primary} width={theme.font.size.highlight} />
         </NavMenuItem>
     </a>,
