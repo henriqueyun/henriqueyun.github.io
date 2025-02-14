@@ -82,7 +82,9 @@ function CareerSection() {
         <CareerJobCardWrapper>
             <CareerHeader id="career-section">CAREER</CareerHeader>
             <CareerJobCard>
-                <CareerCompanyIcon src={KenloIcon} />
+                <a target="_blank" href="https://www.kenlo.com.br/" rel="noreferrer">
+                    <CareerCompanyIcon src={KenloIcon} />
+                </a>
                 <CareerJobCardContent>
                     <CareerCompanyTitle>Kenlo</CareerCompanyTitle>
                     <CareerPositionTitle>Full-stack Developer</CareerPositionTitle>
@@ -103,7 +105,9 @@ function CareerSection() {
                 </CareerJobCardContent>
             </CareerJobCard>
             <CareerJobCard>
-                <CareerCompanyIcon src={ZRPIcon} />
+                <a target="_blank" href="hthttps://www.zrp.com.br" rel="noreferrer">
+                    <CareerCompanyIcon src={ZRPIcon} />
+                </a>
                 <CareerJobCardContent>
                     <CareerCompanyTitle>ZRP</CareerCompanyTitle>
                     <CareerPositionTitle>Full-stack Developer</CareerPositionTitle>
@@ -124,7 +128,9 @@ function CareerSection() {
                 </CareerJobCardContent>
             </CareerJobCard>
             <CareerJobCard>
-                <CareerCompanyIcon src={iColaboraIcon} />
+                <a target="_blank" href="https://portal.icolabora.com.br" rel="noreferrer">
+                    <CareerCompanyIcon src={iColaboraIcon} />
+                </a>
                 <CareerJobCardContent>
                     <CareerCompanyTitle>iColabora</CareerCompanyTitle>
                     <CareerPositionTitle>Junior Programmer Analyst</CareerPositionTitle>
