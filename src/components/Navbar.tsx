@@ -16,7 +16,9 @@ const Nav = styled.nav`
     max-width: 1280px;
     color: white;
     li:hover {
-        color: ${theme.palette.primary};
+        background: linear-gradient(45deg, ${theme.palette.gradient.light} 37%, ${theme.palette.gradient.dark} 99%); 
+        background-clip: text;
+        color: transparent;
     }
     @media (max-width: 768px) {
             flex-direction: column;

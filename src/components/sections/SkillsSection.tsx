@@ -32,7 +32,9 @@ const SkillsHeader = styled.h1`
     font-size: ${theme.font.size.title};
     font-weight: ${theme.font.weight.bold};
     text-align: center;
-    color: ${theme.palette.primary};
+    background: linear-gradient(45deg, ${theme.palette.gradient.light} 37%, ${theme.palette.gradient.dark} 99%); 
+    background-clip: text;
+    color: transparent;
 `
 
 const SkillsSubHeader = styled.p`

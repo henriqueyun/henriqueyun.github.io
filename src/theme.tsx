@@ -5,6 +5,10 @@ export default {
             primary: '#FFFFFF',
             secondary: 'rgba(255, 255, 255, 0.75)'
         },
+        gradient: {
+            light: 'rgba(0,117,255,1)',
+            dark: 'rgba(0,58,126,1)'
+        },
         backgroundColor: '#000000'
     },
     font: {
@@ -13,7 +17,7 @@ export default {
             content: '\'Source Code Pro\', monospace'
         },
         size: {
-            title: '40px',
+            title: '80px',
             action: '32px',
             highlight: '24px',
             content: '16px',
