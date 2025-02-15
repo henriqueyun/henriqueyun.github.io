@@ -99,7 +99,7 @@ function CareerSection() {
                     <CareerCompanyTitle>Kenlo</CareerCompanyTitle>
                     <CareerPositionTitle>Full-stack Developer</CareerPositionTitle>
                     <CareerPositionTimeInterval>
-                        [Dec/23 - Now]
+                        [Dec/23 - Sep/24]
                     </CareerPositionTimeInterval>
                     <CareerPositionDescription>
                         <CareerPositionDescriptionBulletPoint>
