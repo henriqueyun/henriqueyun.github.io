@@ -172,7 +172,9 @@ function CareerSection() {
                 </CareerJobCardContent>
             </CareerJobCard>
             <CareerJobCard>
-                <CareerCompanyIcon src={InputIcon} />
+                <a target="_blank" href="https://input.com.vc" rel="noreferrer">                    
+                    <CareerCompanyIcon src={InputIcon} />
+                </a>
                 <CareerJobCardContent>
                     <CareerCompanyTitle>Input Tecnologia</CareerCompanyTitle>
                     <CareerPositionTitle>Software Development Intern</CareerPositionTitle>
