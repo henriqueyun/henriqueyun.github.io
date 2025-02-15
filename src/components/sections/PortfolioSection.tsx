@@ -198,7 +198,7 @@ function PortfolioSection() {
                                 <OpenInNewIcon fill={theme.palette.primary} />
                                 Open Project
                             </CardActionButton>
-                            <CardActionButton href="https://arara-store-frontend.netlify.app" target="_blank">
+                            <CardActionButton href="https://github.com/henriqueyun/arara-store-frontend" target="_blank">
                                 <OpenInNewIcon fill={theme.palette.primary} />
                                 Repository
                             </CardActionButton>

@@ -43,6 +43,7 @@ const CareerJobCardContent = styled.span`
     display: flex;
     flex-direction: column;
     gap: 16px;
+
 `
 
 const CareerCompanyTitle = styled.h2`
@@ -76,6 +77,7 @@ const CareerPositionDescription = styled.span`
 
 const CareerPositionDescriptionBulletPoint = styled.p`
     padding-bottom: 16px;
+
 `
 
 const CareerPositionKeyTechnology = styled.p`
@@ -119,7 +121,7 @@ function CareerSection() {
                 </CareerJobCardContent>
             </CareerJobCard>
             <CareerJobCard>
-                <a target="_blank" href="hthttps://www.zrp.com.br" rel="noreferrer">
+                <a target="_blank" href="https://www.zrp.com.br" rel="noreferrer">
                     <CareerCompanyIcon src={ZRPIcon} />
                 </a>
                 <CareerJobCardContent>
