@@ -5,6 +5,7 @@ import ArarastoreIcon from '../../assets/ararastore.png'
 import MoviesIcon from '../../assets/movies.png'
 import PokeabilitiesIcon from '../../assets/pokeabilities.png'
 import XetIcon from '../../assets/xet.png'
+import OpenInNewIcon from '../../assets/open-in-new.svg?react'
 
 const PortfolioHeader = styled.h1`
     font-size: ${theme.font.size.title};
@@ -36,6 +37,15 @@ const PortfolioCard = styled.div`
     @media (max-width: 768px) {
         width: 90%;
     }
+    border: 0.25px solid ${theme.palette.primary};
+    border-radius: 8px;
+    transition: box-shadow ease-in 0.5s;
+    &:hover {
+        transition: box-shadow ease-out 0.25s;
+        box-shadow:
+            0px 20px 300px ${theme.palette.gradient.dark};
+    }
+    
 `
 
 const PortfolioCardIcon = styled.img`
@@ -65,6 +75,40 @@ const PortfolioCardMainContentText = styled.span`
     gap: 12px;
 `
 
+
+const PortfolioCardBottomWrapper = styled.span`
+    display: flex;
+    flex-flow: row no-wrap;
+`
+const PortfolioCardBottomLeftContent = styled.span`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: start;
+    gap: 8px;
+    padding: 0px 24px 24px 24px;
+    flex: 2;
+    @media (max-width: 768px) {
+        justify-content: center;
+        padding: 0px 24px 24px 24px;
+    }
+`
+
+const PortfolioCardBottomRightContent = styled.span`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    align-items: start;
+    gap: 8px;
+    padding: 0px 24px 24px 0;
+    flex: 1;
+    @media (max-width: 768px) {
+        justify-content: center;
+        padding: 0px 24px 24px 24px;
+    }
+`
+
+// remove
 const PortfolioCardBottomContent = styled.span`
     display: flex;
     flex-wrap: wrap;
@@ -79,16 +123,54 @@ const PortfolioCardBottomContent = styled.span`
 
 const PortfolioCardTitle = styled.h2`
     font-size: ${theme.font.size.highlight};
+    font-weight: ${theme.font.weight.bold};
 `
 
 const PortfolioCardDescription = styled.p`
     font-size: ${theme.font.size.content};
+    color: ${theme.palette.text.secondary};
 `
 
 const PortfolioBadge = styled.span`
     background-color: ${theme.palette.primary};
+    background: linear-gradient(45deg, ${theme.palette.gradient.light} 37%, ${theme.palette.gradient.dark} 99%); 
     border-radius: 2ch;
     padding: 6px 12px;
+`
+
+const CardActionButton = styled.a`
+    background-color: transparent;
+    border: solid 2px ${theme.palette.primary};
+    padding: 12px;
+    border-radius: 50px;
+    background: linear-gradient(45deg, ${theme.palette.gradient.light} 37%, ${theme.palette.gradient.dark} 99%); 
+    background-clip: text;
+    color: transparent;
+    font-size: ${theme.font.size.content};
+    font-weight: ${theme.font.weight.bold};
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    &:before: {
+        height: 0%;
+        width: 2px;
+    }
+    &:hover {
+        color: ${theme.palette.text.primary};
+        border-color: ${theme.palette.text.secondary};
+        box-shadow: 
+            0 0 10px ${theme.palette.gradient.light},
+            inset 0 0 10px ${theme.palette.gradient.light};
+    }
+    &:hover > svg {
+        fill: white;
+    }
+    &:active {
+        color: ${theme.palette.text.secondary};
+        border-color: ${theme.palette.text.secondary};
+    }
 `
 
 function PortfolioSection() {
@@ -110,17 +192,29 @@ function PortfolioSection() {
                         </PortfolioCardMainContentText>
                     </PortfolioCardMainContent>
 
-                    <PortfolioCardBottomContent>
-                        <PortfolioBadge>React.js</PortfolioBadge>
-                        <PortfolioBadge>Nest.js</PortfolioBadge>
-                        <PortfolioBadge>Vite</PortfolioBadge>
-                    </PortfolioCardBottomContent>
+                    <PortfolioCardBottomWrapper>
+                        <PortfolioCardBottomLeftContent>
+                            <CardActionButton href="https://arara-store-frontend.netlify.app" target="_blank">
+                                <OpenInNewIcon fill={theme.palette.primary} />
+                                Open Project
+                            </CardActionButton>
+                            <CardActionButton href="https://arara-store-frontend.netlify.app" target="_blank">
+                                <OpenInNewIcon fill={theme.palette.primary} />
+                                Repository
+                            </CardActionButton>
+                        </PortfolioCardBottomLeftContent>
+                        <PortfolioCardBottomRightContent>
+                            <PortfolioBadge>React.js</PortfolioBadge>
+                            <PortfolioBadge>Nest.js</PortfolioBadge>
+                            <PortfolioBadge>Vite</PortfolioBadge>
+                        </PortfolioCardBottomRightContent>
+                    </PortfolioCardBottomWrapper>
                 </PortfolioCard>
 
                 <PortfolioCard>
                     <PortfolioCardMainContent>
                         <div>
-                            <PortfolioCardIcon src={MoviesIcon} alt="Movies icon"/>
+                            <PortfolioCardIcon src={MoviesIcon} alt="Movies icon" />
                         </div>
                         <PortfolioCardMainContentText>
                             <PortfolioCardTitle>The Movies API</PortfolioCardTitle>
@@ -146,11 +240,18 @@ function PortfolioSection() {
                             <PortfolioCardDescription>My second Pokédex ever built with Vue.js. I am a developer so I must have built something using the Pokémon Public Web API, right? In this app. you can look for a Pokémon and see it abilities. Built as a Technical Challenge.</PortfolioCardDescription>
                         </PortfolioCardMainContentText>
                     </PortfolioCardMainContent>
-
-                    <PortfolioCardBottomContent>
-                        <PortfolioBadge>Vue.js</PortfolioBadge>
-                        <PortfolioBadge>CSS</PortfolioBadge>
-                    </PortfolioCardBottomContent>
+                    <PortfolioCardBottomWrapper>
+                        <PortfolioCardBottomLeftContent>
+                            <CardActionButton href="https://pokeabilities.surge.sh" target="_blank">
+                                <OpenInNewIcon fill={theme.palette.primary} />
+                                Open Project
+                            </CardActionButton>
+                        </PortfolioCardBottomLeftContent>
+                        <PortfolioCardBottomRightContent>
+                            <PortfolioBadge>Vue.js</PortfolioBadge>
+                            <PortfolioBadge>CSS</PortfolioBadge>
+                        </PortfolioCardBottomRightContent>                        
+                    </PortfolioCardBottomWrapper>
                 </PortfolioCard>
 
                 <PortfolioCard>
