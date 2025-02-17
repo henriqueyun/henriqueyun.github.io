@@ -1,5 +1,7 @@
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { useRef } from 'react'
 import theme from '../../theme'
-import { styled } from "styled-components"
+import { styled } from 'styled-components'
 
 import KenloIcon from '../../assets/kenlo.png'
 import ZRPIcon from '../../assets/zrp.png'
@@ -15,7 +17,7 @@ const CareerHeader = styled.h1`
     color: transparent;
 `
 
-const CareerJobCardWrapper = styled.section`
+const CareerJobCardWrapper = styled(motion.div)`
     display: flex;
     flex-direction: column;
     gap: 72px;
@@ -84,14 +86,36 @@ const CareerPositionKeyTechnology = styled.p`
     font-size: ${theme.font.size.highlight};
     color: ${theme.palette.text.primary};
     @media (max-width: 768px) {
-        text-align: justify;
+        text-align: justify;CareerJobCardWrapper
         font-size: ${theme.font.size.content};
     }
 `
 function CareerSection() {
+    const ref = useRef(null)
+
+    // Secretária do bom código adverte: Essa gambiarra é realmente necessária?
+    // https://i.pinimg.com/736x/6b/ad/78/6bad786f76e73b57eaaffd5ea9e6e03e.jpg
+    // O Firefox não suporta animation-timeline hoje (2025-02-17)
+
+    const { scrollYProgress } = useScroll({
+        target: ref,
+        offset: ["start end", "end start"]
+     });
+
+    useMotionValueEvent(scrollYProgress, "change", () => {
+        console.log('scrollYProgress', scrollYProgress)
+      })
+
+    const opacity = useTransform(scrollYProgress,
+        [0, 0.25, 0.75, 1], [0.25, 1, 1, 0.25]
+    )
+
+    const scale = useTransform(scrollYProgress,
+        [0, 0.25, 0.75, 1], [0.95, 1, 1, 0.95]
+    )
 
     return (
-        <CareerJobCardWrapper>
+        <CareerJobCardWrapper ref={ref} style={{ opacity, scale}}>
             <CareerHeader id="career-section">CAREER</CareerHeader>
             <CareerJobCard>
                 <a target="_blank" href="https://www.kenlo.com.br/" rel="noreferrer">
@@ -174,7 +198,7 @@ function CareerSection() {
                 </CareerJobCardContent>
             </CareerJobCard>
             <CareerJobCard>
-                <a target="_blank" href="https://input.com.vc" rel="noreferrer">                    
+                <a target="_blank" href="https://input.com.vc" rel="noreferrer">
                     <CareerCompanyIcon src={InputIcon} />
                 </a>
                 <CareerJobCardContent>
