@@ -95,16 +95,12 @@ function CareerSection() {
 
     // Secretária do bom código adverte: Essa gambiarra é realmente necessária?
     // https://i.pinimg.com/736x/6b/ad/78/6bad786f76e73b57eaaffd5ea9e6e03e.jpg
-    // O Firefox não suporta animation-timeline hoje (2025-02-17)
+    // O Firefox não suporta animation-timeline hoje (2025-02- 17)
 
     const { scrollYProgress } = useScroll({
         target: ref,
         offset: ["start end", "end start"]
      });
-
-    useMotionValueEvent(scrollYProgress, "change", () => {
-        console.log('scrollYProgress', scrollYProgress)
-      })
 
     const opacity = useTransform(scrollYProgress,
         [0, 0.25, 0.75, 1], [0.25, 1, 1, 0.25]
