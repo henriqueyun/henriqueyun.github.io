@@ -22,10 +22,10 @@ export default {
             highlight: '24px',
             content: '16px',
             xs: {
-                title: '40px',
-            action: '32px',
-            highlight: '24px',
-            content: '16px'
+                title: '56px',
+                action: '32px',
+                highlight: '24px',
+                content: '16px'
             }
         },
         weight: {

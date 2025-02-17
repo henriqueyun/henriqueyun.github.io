@@ -15,12 +15,19 @@ const CareerHeader = styled.h1`
     background: linear-gradient(45deg, ${theme.palette.gradient.light} 37%, ${theme.palette.gradient.dark} 99%); 
     background-clip: text;
     color: transparent;
+    @media (max-width: 768px) {
+        font-size: ${theme.font.size.xs.title};
+    }
 `
 
 const CareerJobCardWrapper = styled(motion.div)`
     display: flex;
     flex-direction: column;
     gap: 72px;
+    align-items: center;
+    @media (max-width: 768px) {
+        gap: 48px;
+    }
 `
 
 const CareerJobCard = styled.div`
@@ -90,6 +97,54 @@ const CareerPositionKeyTechnology = styled.p`
         font-size: ${theme.font.size.content};
     }
 `
+
+const CareerNumbers = styled.header`
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    gap: 48px;
+    @media (max-width: 768px) {
+        flex-flow: column wrap;
+        font-size: ${theme.font.size.highlight};
+        gap: 16px;
+    }
+    font-size: ${theme.font.size.action};
+`
+
+const CareerBadge = styled.span`
+    display: flex;
+    flex-flow: row wrap;
+    gap: 32px;
+    border-bottom: 4px solid ${theme.palette.primary};
+    padding-bottom: 8px;
+    transition: border-bottom 1s ease-out;
+    &:hover {
+        border-bottom: 4px solid ${theme.palette.text.primary};
+        box-shadow: ${theme.palette.text.primary};
+        transition: border-bottom ease-out 0.25s;
+    }
+    &:hover strong {
+        color: ${theme.palette.text.primary};
+        transition: color ease-out 0.25s;
+    }
+    @media (max-width: 768px) {
+        justify-content: space-between;
+    }
+`
+
+const CareerLabel = styled.span`
+    font-weight: ${theme.font.weight.bold};
+    background: linear-gradient(45deg, ${theme.palette.gradient.light} 37%, ${theme.palette.gradient.dark} 99%); 
+    background-clip: text;
+    color: transparent;
+`
+
+const CareerNumber = styled.strong`
+    transition: color ease-out 1s;
+    font-weight: ${theme.font.weight.bold};
+    color: ${theme.palette.text.secondary};
+`
+ 
 function CareerSection() {
     const ref = useRef(null)
 
@@ -113,6 +168,32 @@ function CareerSection() {
     return (
         <CareerJobCardWrapper ref={ref} style={{ opacity, scale}}>
             <CareerHeader id="career-section">CAREER</CareerHeader>
+            <CareerNumbers>
+                <CareerBadge>
+                    <CareerLabel>
+                        Experience
+                    </CareerLabel>
+                    <CareerNumber>
+                        +4 years
+                    </CareerNumber>
+                </CareerBadge>
+                <CareerBadge>
+                    <CareerLabel>
+                        Node
+                    </CareerLabel>
+                    <CareerNumber>
+                        +4 years
+                    </CareerNumber>
+                </CareerBadge>
+                <CareerBadge>
+                    <CareerLabel>
+                        React
+                    </CareerLabel>
+                    <CareerNumber>
+                        ~3 years
+                    </CareerNumber>
+                </CareerBadge>
+            </CareerNumbers>
             <CareerJobCard>
                 <a target="_blank" href="https://www.kenlo.com.br/" rel="noreferrer">
                     <CareerCompanyIcon src={KenloIcon} />

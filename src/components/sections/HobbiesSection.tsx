@@ -30,6 +30,9 @@ const HobbiesHeader = styled.h1`
     background: linear-gradient(45deg, ${theme.palette.gradient.light} 37%, ${theme.palette.gradient.dark} 99%); 
     background-clip: text;
     color: transparent;
+    @media (max-width: 768px) {
+        font-size: ${theme.font.size.xs.title};
+    }
 `
 
 const HobbiesSubheader = styled.p`

@@ -14,6 +14,9 @@ const PortfolioHeader = styled.h1`
     background: linear-gradient(45deg, ${theme.palette.gradient.light} 37%, ${theme.palette.gradient.dark} 99%); 
     background-clip: text;
     color: transparent;
+    @media (max-width: 768px) {
+        font-size: ${theme.font.size.xs.title};
+    }
 `
 
 const PortfolioCardsWrapper = styled.div`
@@ -34,18 +37,18 @@ const PortfolioCard = styled.div`
     backdrop-filter: blur(4px);
     display: flex;
     flex-direction: column;
-    @media (max-width: 768px) {
-        width: 90%;
-    }
     border: 0.25px solid ${theme.palette.primary};
     border-radius: 8px;
     transition: box-shadow ease-in 0.5s;
     &:hover {
-        transition: box-shadow ease-out 0.25s;
+        transition: box-shadow ease-in 0.25s;
         box-shadow:
-            0px 20px 300px ${theme.palette.gradient.dark};
+        0px 20px 300px ${theme.palette.gradient.dark};
     }
     
+    @media (max-width: 768px) {
+        width: 90%;
+    }
 `
 
 const PortfolioCardIcon = styled.img`

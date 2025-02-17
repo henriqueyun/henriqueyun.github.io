@@ -18,8 +18,11 @@ const Header = styled.header`
 const HeaderTop = styled.section`
     display: flex;
     justify-content: space-between;
+    align-items: start;
+    gap: 48px;
     width: 100%;
     @media (max-width: 768px) {
+        align-items: unset;
         width: 80%;
         flex-direction: column;
         gap: 32px;
@@ -59,6 +62,9 @@ const HighlightedHeaderText = styled.b`
 const HeaderHeadline = styled.strong`
     font-size: ${theme.font.size.xs.title};
     font-weight: ${theme.font.weight.bold};
+    @media (max-width: 768px) {
+        font-size: ${theme.font.size.xs.action};
+    }
 `
 const HeaderButton = styled.a`
     background: unset;
@@ -100,7 +106,11 @@ function HeaderSection() {
                         {' '}
                         <HighlightedHeaderText>Henrique Lima</HighlightedHeaderText>
                         {' '}
-                        and I help business and write code, I am a Full-stack Developer that can delivery sites, services and apps from conception and design to users in production
+                        and I help business and write code, I am a 
+                        {' '}
+                        <HighlightedHeaderText>Full-stack Developer</HighlightedHeaderText>
+                        {' '}
+                        with 4 years of experience that can delivery sites, services and apps from conception and design to users in production
                     </HeaderText>
                 </HeaderTextWrapper>
                 <HeaderButton target="_self" download="Currículo - Henrique Lima de Oliveira.pdf" href="/curriculum-henrique-lima.pdf">
