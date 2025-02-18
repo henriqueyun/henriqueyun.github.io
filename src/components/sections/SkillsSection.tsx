@@ -41,8 +41,9 @@ const SkillsHeader = styled.h1`
 `
 
 const SkillsSubHeader = styled.p`
-    font-size: ${theme.font.size.content};
     text-align: center;
+    color: ${theme.palette.text.secondary};
+    font-size: ${theme.font.size.highlight};
 `
 
 const SkillsDivisionWrapper = styled.ul`
@@ -67,9 +68,14 @@ const SkillsDivisionTitlesWrapper = styled.ul`
 
 const SkillDivisionTitle = styled.li<{ $selected: boolean; }>`
     font-size: ${theme.font.size.highlight};
-    color: ${props => props.$selected ? theme.palette.text.primary : theme.palette.text.secondary};
+    background: ${props => props.$selected ? `linear-gradient(45deg, ${theme.palette.gradient.light} 37%, ${theme.palette.gradient.dark} 99%)`: theme.palette.text.secondary};
+    background-clip: text;
+    color: transparent;
     font-weight: ${theme.font.weight.bold};
     cursor: pointer;
+    &:hover {
+        color: ${props => !props.$selected ? theme.palette.text.primary : 'transparent'};
+    }
 `
 
 const SkillsDivisionIconWrapper = styled.ul`
