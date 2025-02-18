@@ -24,7 +24,7 @@ export default {
             xs: {
                 title: '56px',
                 action: '32px',
-                highlight: '24px',
+                highlight: '16px',
                 content: '16px'
             }
         },

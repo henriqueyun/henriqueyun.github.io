@@ -3,7 +3,7 @@ import { styled } from "styled-components"
 import Navbar from "./components/Navbar"
 import Footerbar from "./components/Footerbar"
 import { HeaderSection, PortfolioSection, HobbiesSection } from './components'
-import backgroundImage from './assets/bg.png'
+import backgroundImage from './assets/bg.webp'
 import CareerSection from './components/sections/CareerSection'
 import SkillsSection from './components/sections/SkillsSection'
 

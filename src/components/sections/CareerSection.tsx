@@ -3,10 +3,10 @@ import { useRef } from 'react'
 import theme from '../../theme'
 import { styled } from 'styled-components'
 
-import KenloIcon from '../../assets/kenlo.png'
-import ZRPIcon from '../../assets/zrp.png'
-import iColaboraIcon from '../../assets/icolabora.png'
-import InputIcon from '../../assets/input.png'
+import KenloIcon from '../../assets/kenlo.webp'
+import ZRPIcon from '../../assets/zrp.webp'
+import iColaboraIcon from '../../assets/icolabora.webp'
+import InputIcon from '../../assets/input.webp'
 
 const CareerHeader = styled.h1`
     font-size: ${theme.font.size.title};

@@ -2,12 +2,12 @@ import { styled } from "styled-components"
 import theme from "../../theme"
 import { useState } from "react"
 
-import ChessIcon from '../../assets/chess.png'
-import VideogamesIcon from '../../assets/videogame.png'
-import ScienceIcon from '../../assets/science.png'
-import LivestreamIcon from '../../assets/livestream.png'
-import FoodIcon from '../../assets/pizza.png'
-import IllustrationIcon from '../../assets/illustration.png'
+import ChessIcon from '../../assets/chess.webp'
+import VideogamesIcon from '../../assets/videogame.webp'
+import ScienceIcon from '../../assets/science.webp'
+import LivestreamIcon from '../../assets/livestream.webp'
+import FoodIcon from '../../assets/pizza.webp'
+import IllustrationIcon from '../../assets/illustration.webp'
 
 interface Hobbie {
     title: string,
@@ -39,6 +39,9 @@ const HobbiesSubheader = styled.p`
     font-size: ${theme.font.size.highlight};
     text-align: center;
     color: ${theme.palette.text.secondary};
+    @media (max-width: 768px) {
+        font-size: ${theme.font.size.xs.highlight};
+    }
 `
 
 const HobbiesWrapper = styled.section`
@@ -61,6 +64,7 @@ const HobbiesIconWrapper = styled.ul`
         grid-template-columns: 1fr 1fr;
     }
 `
+
 
 const Hobbie = styled.span<{ $selected?: boolean; }>`
     display: flex;

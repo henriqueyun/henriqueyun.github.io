@@ -1,10 +1,10 @@
 import { styled } from 'styled-components'
 import theme from '../../theme'
 
-import ArarastoreIcon from '../../assets/ararastore.png'
-import MoviesIcon from '../../assets/movies.png'
-import PokeabilitiesIcon from '../../assets/pokeabilities.png'
-import XetIcon from '../../assets/xet.png'
+import ArarastoreIcon from '../../assets/ararastore.webp'
+import MoviesIcon from '../../assets/movies.webp'
+import PokeabilitiesIcon from '../../assets/pokeabilities.webp'
+import XetIcon from '../../assets/xet.webp'
 import OpenInNewIcon from '../../assets/open-in-new.svg?react'
 
 const PortfolioHeader = styled.h1`
@@ -43,7 +43,7 @@ const PortfolioCard = styled.div`
     &:hover {
         transition: box-shadow ease-in 0.25s;
         box-shadow:
-        0px 20px 300px ${theme.palette.gradient.dark};
+            0px 20px 300px ${theme.palette.gradient.dark};
     }
     
     @media (max-width: 768px) {
@@ -111,7 +111,7 @@ const PortfolioCardBottomRightContent = styled.span`
     }
 `
 
-// remove
+// TODO: remove
 const PortfolioCardBottomContent = styled.span`
     display: flex;
     flex-wrap: wrap;
