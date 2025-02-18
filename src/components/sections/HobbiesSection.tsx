@@ -78,7 +78,7 @@ const Hobbie = styled.span<{ $selected?: boolean; }>`
         opacity: 1;
     }
     &:hover li {
-        color: ${props => !props.$selected ? theme.palette.text.secondary : theme.palette.text.primary};
+        color: ${props => !props.$selected ? theme.palette.text.secondary : 'transparent'};
     }
 `
 
