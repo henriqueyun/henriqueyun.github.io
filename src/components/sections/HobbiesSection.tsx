@@ -36,8 +36,9 @@ const HobbiesHeader = styled.h1`
 `
 
 const HobbiesSubheader = styled.p`
-    font-size: ${theme.font.size.content};
+    font-size: ${theme.font.size.highlight};
     text-align: center;
+    color: ${theme.palette.text.secondary};
 `
 
 const HobbiesWrapper = styled.section`
@@ -59,15 +60,22 @@ const HobbiesIconWrapper = styled.ul`
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     }
-
 `
 
-const Hobbie = styled.span`
+const Hobbie = styled.span<{ $selected?: boolean; }>`
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 32px;
     cursor: pointer;
+    opacity: ${props => !props.$selected ? '0.75' : '1'};
+    width: 180px;
+    &:hover {
+        opacity: 1;
+    }
+    &:hover li {
+        color: ${props => !props.$selected ? theme.palette.text.secondary : theme.palette.text.primary};
+    }
 `
 
 const HobbieIcon = styled.img`
@@ -79,7 +87,9 @@ const HobbieTitle = styled.li<{ $selected?: boolean; }>`
     font-weight: ${theme.font.weight.bold};
     font-family: ${theme.font.family.title}; 
     font-size: ${theme.font.size.highlight};
-    color: ${props => !props.$selected ? theme.palette.text.secondary : theme.palette.text.primary};
+    background: ${props => props.$selected ? `linear-gradient(45deg, ${theme.palette.gradient.light} 37%, ${theme.palette.gradient.dark} 99%)`: theme.palette.text.secondary};
+    background-clip: text;
+    color: transparent;
     @media (max-width: 768px) {
         font-size: ${theme.font.size.content};
     }
@@ -141,7 +151,7 @@ function HobbiesSection() {
             <HobbiesWrapper>
                 <HobbiesIconWrapper>
                     {hobbies.map((hobbie: Hobbie) => (
-                        <Hobbie key={hobbie.title} onClick={() => setSelectedHobbieDescription(hobbie.description)}>
+                        <Hobbie key={hobbie.title} onClick={() => setSelectedHobbieDescription(hobbie.description)} $selected={hobbie.description === selectedHobbieDescription}>
                             <HobbieIcon src={hobbie.image} alt={`${uppercaseFirstLetter(hobbie.title)} icon`} />
                             <HobbieTitle $selected={hobbie.description === selectedHobbieDescription}>{hobbie.title}</HobbieTitle>
                         </Hobbie> 
