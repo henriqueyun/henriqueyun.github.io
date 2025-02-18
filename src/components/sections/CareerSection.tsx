@@ -93,7 +93,7 @@ const CareerPositionKeyTechnology = styled.p`
     font-size: ${theme.font.size.highlight};
     color: ${theme.palette.text.primary};
     @media (max-width: 768px) {
-        text-align: justify;CareerJobCardWrapper
+        text-align: justify;
         font-size: ${theme.font.size.content};
     }
 `
