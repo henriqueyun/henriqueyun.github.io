@@ -6,6 +6,7 @@ import MoviesIcon from '../../assets/movies.webp'
 import PizzariaIcon from '../../assets/projeto-pizzaria.webp'
 import XetIcon from '../../assets/xet.webp'
 import OpenInNewIcon from '../../assets/open-in-new.svg?react'
+import GithubIcon from '../../assets/github.svg?react'
 
 const PortfolioHeader = styled.h1`
     font-size: ${theme.font.size.title};
@@ -89,7 +90,7 @@ const PortfolioCardBottomLeftContent = styled.span`
     justify-content: start;
     align-items: start;
     gap: 8px;
-    padding: 0px 24px 24px 24px;
+    padding: 0px 24px 0 24px;
     flex: 2;
     @media (max-width: 768px) {
         justify-content: center;
@@ -111,21 +112,12 @@ const PortfolioCardBottomRightContent = styled.span`
     }
 `
 
-// TODO: remove
-const PortfolioCardBottomContent = styled.span`
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: end;
-    gap: 8px;
-    padding: 0px 24px 24px 0;
-    @media (max-width: 768px) {
-        justify-content: center;
-        padding: 0px 24px 24px 24px;
-    }
-`
-
 const PortfolioCardTitle = styled.h2`
     font-size: ${theme.font.size.highlight};
+    font-weight: ${theme.font.weight.bold};
+`
+
+const PortfolioCardSubtitle = styled.h2`
     font-weight: ${theme.font.weight.bold};
 `
 
@@ -191,6 +183,7 @@ function PortfolioSection() {
                         </div>
                         <PortfolioCardMainContentText>
                             <PortfolioCardTitle>Ararastore</PortfolioCardTitle>
+                            <PortfolioCardSubtitle>Full-stack Project</PortfolioCardSubtitle>
                             <PortfolioCardDescription>This was my college final project. It&apos;s a fashion e-commerce that has focus on early entrepeneurs. I participated of the entire process of development including design, front end development, database modeling and back end development.</PortfolioCardDescription>
                         </PortfolioCardMainContentText>
                     </PortfolioCardMainContent>
@@ -202,7 +195,7 @@ function PortfolioSection() {
                                 Open Project
                             </CardActionButton>
                             <CardActionButton href="https://github.com/henriqueyun/arara-store-frontend" target="_blank">
-                                <OpenInNewIcon fill={theme.palette.primary} />
+                                <GithubIcon fill={theme.palette.primary} />
                                 Repository
                             </CardActionButton>
                         </PortfolioCardBottomLeftContent>
@@ -221,16 +214,24 @@ function PortfolioSection() {
                         </div>
                         <PortfolioCardMainContentText>
                             <PortfolioCardTitle>The Movies API</PortfolioCardTitle>
+                            <PortfolioCardSubtitle>Client Front-end</PortfolioCardSubtitle>
                             <PortfolioCardDescription>It&apos;s user interface built with React.js that consumes The Movies API for looking for movies. It uses pure CSS only and has simple features like search and pagination. Built as a Technical Challenge.</PortfolioCardDescription>
                         </PortfolioCardMainContentText>
                     </PortfolioCardMainContent>
-
-                    <PortfolioCardBottomContent>
-                        <PortfolioBadge>React.js</PortfolioBadge>
+                    <PortfolioCardBottomWrapper>
+                        <PortfolioCardBottomLeftContent>
+                            <CardActionButton href="https://github.com/henriqueyun/cubos-movies" target="_blank">
+                                <GithubIcon fill={theme.palette.primary} />
+                                Repository
+                            </CardActionButton>
+                        </PortfolioCardBottomLeftContent>
+                        <PortfolioCardBottomRightContent>
+                        <PortfolioBadge>Vue.js</PortfolioBadge>
                         <PortfolioBadge>CSS</PortfolioBadge>
                         <PortfolioBadge>Vite</PortfolioBadge>
                         <PortfolioBadge>API</PortfolioBadge>
-                    </PortfolioCardBottomContent>
+                        </PortfolioCardBottomRightContent>                        
+                    </PortfolioCardBottomWrapper>
                 </PortfolioCard>
 
                 <PortfolioCard>
@@ -240,19 +241,25 @@ function PortfolioSection() {
                         </div>
                         <PortfolioCardMainContentText>
                             <PortfolioCardTitle>Projeto Pizzaria</PortfolioCardTitle>
+                            <PortfolioCardSubtitle>Full-stack Project</PortfolioCardSubtitle>
                             <PortfolioCardDescription>This service is part of a pizzaria system, here you can register your information order a pizza and a drink then track your order. The project has another front-end where the pizzaria attendent update information about the orders.</PortfolioCardDescription>
                         </PortfolioCardMainContentText>
                     </PortfolioCardMainContent>
                     <PortfolioCardBottomWrapper>
                         <PortfolioCardBottomLeftContent>
-                            <CardActionButton href="https://pizzaria-cliente.netlify.app/#/" target="_blank">
+                            <CardActionButton href="https://pizzaria-cliente.netlify.app" target="_blank">
                                 <OpenInNewIcon fill={theme.palette.primary} />
                                 Open Project
+                            </CardActionButton>
+                            <CardActionButton href="https://github.com/henriqueyun/pizzaria-monorepo" target="_blank">
+                                <GithubIcon fill={theme.palette.primary} />
+                                Repository
                             </CardActionButton>
                         </PortfolioCardBottomLeftContent>
                         <PortfolioCardBottomRightContent>
                             <PortfolioBadge>Vue.js</PortfolioBadge>
                             <PortfolioBadge>CSS</PortfolioBadge>
+                            <PortfolioBadge>Node.js</PortfolioBadge>
                         </PortfolioCardBottomRightContent>                        
                     </PortfolioCardBottomWrapper>
                 </PortfolioCard>
@@ -264,15 +271,23 @@ function PortfolioSection() {
                         </div>
                         <PortfolioCardMainContentText>
                             <PortfolioCardTitle>Xet</PortfolioCardTitle>
+                            <PortfolioCardSubtitle>Full-stack Project</PortfolioCardSubtitle>
                             <PortfolioCardDescription>Personal project where I made a simple web application that uses web sockets to make chat that can be accessed through a browser. As a challenge I added the feature that chats got available for a limited amount of time.</PortfolioCardDescription>
                         </PortfolioCardMainContentText>
                     </PortfolioCardMainContent>
-
-                    <PortfolioCardBottomContent>
+                    <PortfolioCardBottomWrapper>
+                        <PortfolioCardBottomLeftContent>
+                            <CardActionButton href="https://github.com/henriqueyun/chat-frontend" target="_blank">
+                                <GithubIcon fill={theme.palette.primary} />
+                                Repository
+                            </CardActionButton>
+                        </PortfolioCardBottomLeftContent>
+                        <PortfolioCardBottomRightContent>
                         <PortfolioBadge>Socket.io</PortfolioBadge>
                         <PortfolioBadge>Quasar.js</PortfolioBadge>
                         <PortfolioBadge>Express.js</PortfolioBadge>
-                    </PortfolioCardBottomContent>
+                        </PortfolioCardBottomRightContent>                        
+                    </PortfolioCardBottomWrapper>
                 </PortfolioCard>
             </PortfolioCardsWrapper>
         </section>
