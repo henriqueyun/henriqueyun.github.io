@@ -267,8 +267,8 @@ Error generating stack: `+o.message+`
     justify-content: start;
     align-items: start;
     gap: 8px;
-    padding: 0px 24px 0 24px;
-    flex: 2;
+    padding: 0 0 0 24px;
+    flex: 1.5 0 0;
     @media (max-width: 768px) {
         justify-content: center;
         padding: 0px 24px 24px 24px;
@@ -280,7 +280,7 @@ Error generating stack: `+o.message+`
     align-items: start;
     gap: 8px;
     padding: 0px 24px 24px 0;
-    flex: 1;
+    flex: 1 1 0;
     @media (max-width: 768px) {
         justify-content: center;
         padding: 0px 24px 24px 24px;
