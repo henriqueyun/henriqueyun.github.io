@@ -3,7 +3,7 @@ import theme from '../../theme'
 
 import ArarastoreIcon from '../../assets/ararastore.webp'
 import MoviesIcon from '../../assets/movies.webp'
-import PokeabilitiesIcon from '../../assets/pokeabilities.webp'
+import PizzariaIcon from '../../assets/projeto-pizzaria.webp'
 import XetIcon from '../../assets/xet.webp'
 import OpenInNewIcon from '../../assets/open-in-new.svg?react'
 
@@ -236,16 +236,16 @@ function PortfolioSection() {
                 <PortfolioCard>
                     <PortfolioCardMainContent>
                         <div>
-                            <PortfolioCardIcon src={PokeabilitiesIcon} alt="Pokéabilities icon" />
+                            <PortfolioCardIcon src={PizzariaIcon} alt="Pizzaria icon" />
                         </div>
                         <PortfolioCardMainContentText>
-                            <PortfolioCardTitle>Pokéabilities</PortfolioCardTitle>
-                            <PortfolioCardDescription>My second Pokédex ever built with Vue.js. I am a developer so I must have built something using the Pokémon Public Web API, right? In this app. you can look for a Pokémon and see it abilities. Built as a Technical Challenge.</PortfolioCardDescription>
+                            <PortfolioCardTitle>Projeto Pizzaria</PortfolioCardTitle>
+                            <PortfolioCardDescription>This service is part of a pizzaria system, here you can register your information order a pizza and a drink then track your order. The project has another front-end where the pizzaria attendent update information about the orders.</PortfolioCardDescription>
                         </PortfolioCardMainContentText>
                     </PortfolioCardMainContent>
                     <PortfolioCardBottomWrapper>
                         <PortfolioCardBottomLeftContent>
-                            <CardActionButton href="https://pokeabilities.surge.sh" target="_blank">
+                            <CardActionButton href="https://pizzaria-cliente.netlify.app/#/" target="_blank">
                                 <OpenInNewIcon fill={theme.palette.primary} />
                                 Open Project
                             </CardActionButton>
