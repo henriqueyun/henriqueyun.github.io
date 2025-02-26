@@ -83,6 +83,9 @@ const PortfolioCardMainContentText = styled.span`
 const PortfolioCardBottomWrapper = styled.span`
     display: flex;
     flex-flow: row no-wrap;
+    @media (max-width: 768px) {
+      flex-flow: column wrap;
+    }
 `
 
 const PortfolioCardBottomLeftContent = styled.span`
@@ -95,6 +98,9 @@ const PortfolioCardBottomLeftContent = styled.span`
     flex: 1.5 0 0;
     @media (max-width: 768px) {
         padding: 0px 24px 24px 24px;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
     }
 `
 
@@ -108,6 +114,8 @@ const PortfolioCardBottomRightContent = styled.span`
     flex: 1 1 0;
     @media (max-width: 768px) {
         padding: 0px 24px 24px 24px;
+        justify-content: center;
+        align-items: center;
     }
 `
 
