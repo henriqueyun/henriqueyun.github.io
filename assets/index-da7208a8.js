@@ -261,6 +261,9 @@ Error generating stack: `+o.message+`
 `,Co=j.span`
     display: flex;
     flex-flow: row no-wrap;
+    @media (max-width: 768px) {
+      flex-flow: column wrap;
+    }
 `,ko=j.span`
     display: flex;
     flex-wrap: wrap;
@@ -270,8 +273,10 @@ Error generating stack: `+o.message+`
     padding: 0 0 0 24px;
     flex: 1.5 0 0;
     @media (max-width: 768px) {
-        justify-content: center;
         padding: 0px 24px 24px 24px;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
     }
 `,Eo=j.span`
     display: flex;
@@ -282,8 +287,9 @@ Error generating stack: `+o.message+`
     padding: 0px 24px 24px 0;
     flex: 1 1 0;
     @media (max-width: 768px) {
-        justify-content: center;
         padding: 0px 24px 24px 24px;
+        justify-content: center;
+        align-items: center;
     }
 `,To=j.h2`
     font-size: ${x.font.size.highlight};
@@ -583,9 +589,13 @@ Error generating stack: `+o.message+`
     align-items: center;
     gap: 8px;
     flex-flow: column wrap;
-    &:hover {
+    &:hover:nth-child(even) {
         box-shadow:
-            50px 250px 150px ${x.palette.gradient.light};
+            80px 250px 150px ${x.palette.gradient.light};
+    }
+    &:hover:nth-child(odd) {
+         box-shadow:
+            -80px 250px 150px ${x.palette.gradient.light};
     }
     &:hover > strong {
         color: ${x.palette.text.primary};
