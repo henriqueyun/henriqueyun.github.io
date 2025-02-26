@@ -115,9 +115,13 @@ const Skill = styled.span`
     align-items: center;
     gap: 8px;
     flex-flow: column wrap;
-    &:hover {
+    &:hover:nth-child(even) {
         box-shadow:
-            50px 250px 150px ${theme.palette.gradient.light};
+            80px 250px 150px ${theme.palette.gradient.light};
+    }
+    &:hover:nth-child(odd) {
+         box-shadow:
+            -80px 250px 150px ${theme.palette.gradient.light};
     }
     &:hover > strong {
         color: ${theme.palette.text.primary};

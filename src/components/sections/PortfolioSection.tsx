@@ -84,6 +84,7 @@ const PortfolioCardBottomWrapper = styled.span`
     display: flex;
     flex-flow: row no-wrap;
 `
+
 const PortfolioCardBottomLeftContent = styled.span`
     display: flex;
     flex-wrap: wrap;
@@ -93,7 +94,6 @@ const PortfolioCardBottomLeftContent = styled.span`
     padding: 0 0 0 24px;
     flex: 1.5 0 0;
     @media (max-width: 768px) {
-        justify-content: center;
         padding: 0px 24px 24px 24px;
     }
 `
@@ -107,7 +107,6 @@ const PortfolioCardBottomRightContent = styled.span`
     padding: 0px 24px 24px 0;
     flex: 1 1 0;
     @media (max-width: 768px) {
-        justify-content: center;
         padding: 0px 24px 24px 24px;
     }
 `
