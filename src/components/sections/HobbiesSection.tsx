@@ -83,7 +83,6 @@ const Hobbie = styled.span<{ $selected?: boolean; }>`
 `
 
 const HobbieIcon = styled.img`
-    width: 64px;
     height: 64px;
 `
 
@@ -114,12 +113,12 @@ function HobbiesSection() {
     const hobbies: Hobbie[] = [
         {
             title: "CHESS",
-            description: "I was introduced to chess in school by some classmates, I practiced it a little and I even was part of the school chess team by a while. Nowadays,  I used to keep up with world chess scenario and still play sometimes. I am currently trying to play more rapid (10 + 0) instead of bullet games",
+            description: "I was introduced to chess back in school by some classmates. I practiced it a little and I even a member of the school chess team by a while. Nowadays,  I used to keep up with world chess scenario and still play sometimes. I am currently trying to play more rapid matches (10 + 0) to solidify my knowledge.",
             image: ChessIcon
         },
         {
             title: "VIDEOGAMES",
-            description: "I play videogames since I was a kid, the english that I know I have learned playing games and browsing on internet. My favorite game of all times is Shadow of The Colossus. I've just finished Grand Theft Auto V, Monster Hunter Rise: Sunbreak (DLC) and Pokémon: Soul Silver and now I've been playing Snake Pass, Donkey Kong Country and Trials Fusion",
+            description: "I really enjoy videogames, the english that I know I have learned playing games and browsing on internet. My favorite game of all times is Shadow of The Colossus. I've just finished Snake Pass, Grand Theft Auto V, Monster Hunter Rise: Sunbreak (DLC) and now I've been playing Doom II, Bioshock: Remastered and Donkey Kong Country",
             image: VideogamesIcon
         },
         {
@@ -129,17 +128,17 @@ function HobbiesSection() {
         },
         {
             title: "SCIENCE",
-            description: "Since I discovered the scientific thinking/method I became a skeptic person, so on I try to be near of science news, exercise my own scientic thinking and encourage people to also do it",
+            description: "I am a skeptic person. Since I was a kid I am always trying to ask questions to know more about the world. I found in science a opportunity to get my questions answered so I am always reading and watching science related content",
             image: ScienceIcon
         },
         {
             title: "FOOD",
-            description: "I live in São Paulo - SP, Brazil, and it has a pretty cool pizza culture; pepperoni pizza is my favorite food since I was a kid so if you're going to ask me to eat it's definitely the right order. I also like Ramen and Sushi",
+            description: "I live in São Paulo - SP, Brazil and here we have pretty good pizzas; pepperoni pizza is my favorite food since I was a kid and I also like Ramen and Sushi so if you're going to ask me to eat one of those definitely the right order",
             image: FoodIcon
         },
         {
             title: "ILLUSTRATION",
-            description: "I'm definitely not an illustrator, but I really enjoy to draw since I was a kid so every now and then I take time to doodle, draw and play with pen, pencils and papers",
+            description: "I'm definitely not an illustrator, but I have always enjoyed to draw so every now and then I take time to doodle, draw and play with pen, pencils and papers",
             image: IllustrationIcon
         }
     ]
