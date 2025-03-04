@@ -243,8 +243,7 @@ function CareerSection() {
                         </CareerPositionDescriptionBulletPoint>
                     </CareerPositionDescription>
                     <CareerPositionKeyTechnology>
-                        Key technologies: React, Node (Typescript), .NET, Serverless Framework, Jest,
-                        MongoDB.
+                        Key technologies: Node (Typescript), React, Serverless Framework, Nest, Jest, Material UI, RDS, SQS, SQL, MongoDB e Redis.
                     </CareerPositionKeyTechnology>
                 </CareerJobCardContent>
             </CareerJobCard>
@@ -255,7 +254,7 @@ function CareerSection() {
                 <CareerJobCardContent>
                     <CareerCompanyTitle>iColabora</CareerCompanyTitle>
                     <CareerPositionTitle>Junior Programmer Analyst</CareerPositionTitle>
-                    <CareerPositionTimeInterval> [Nov/19 - Apr/22]</CareerPositionTimeInterval>
+                    <CareerPositionTimeInterval> [Feb/21 - Apr/22]</CareerPositionTimeInterval>
                     <CareerPositionDescription>
                         <CareerPositionDescriptionBulletPoint>
                             - Worked on developing CRM processes and forms in Turbina BPMN (Activiti fork);
@@ -266,12 +265,32 @@ function CareerSection() {
                         <CareerPositionDescriptionBulletPoint>
                             - Developed backend and ETL services mainly using Node (Sequelize ORM, ES6) and also has minor contributions for Java projects;
                         </CareerPositionDescriptionBulletPoint>
-                        - Utilized data streams (SQL with templates) to persist data to user forms.
+                        <CareerPositionDescriptionBulletPoint>
+                            - Utilized data streams (SQL with templates) to persist data to user forms.
+                        </CareerPositionDescriptionBulletPoint>
                     </CareerPositionDescription>
                     <CareerPositionKeyTechnology>
-                        Key technologies: Node (Typescript), React, Serverless Framework, Nest, Jest,
-                        Material UI, RDS, SQS, SQL, MongoDB e Redis.
+                        Key technologies: Vue, HTML, CSS, Javascript, Node, Bootstrap, SQL.
                     </CareerPositionKeyTechnology>
+                    <br />
+                    <CareerPositionTitle>Software Development Intern</CareerPositionTitle>
+                    <CareerPositionTimeInterval> [Nov/19 - Feb/21]</CareerPositionTimeInterval>
+                    <CareerPositionDescription>
+                        <CareerPositionDescriptionBulletPoint>
+                            - Colaborated to migration of different environments from Rancher (v1) to Kubernetes in cloud;
+                        </CareerPositionDescriptionBulletPoint>
+                        <CareerPositionDescriptionBulletPoint>
+                            - Refactored Jenkins pipelines to new CI scheme using Helm & Gitlab Webhooks; 
+                        </CareerPositionDescriptionBulletPoint>
+                        <CareerPositionDescriptionBulletPoint>
+                            - Performed RBAC configuration for different environments;
+                        </CareerPositionDescriptionBulletPoint>
+                            - Colaborated in adequations of different services to centralized log (utilizing ELK). 
+                    </CareerPositionDescription>
+                    <CareerPositionKeyTechnology>
+                        Key technologies: Linux, Docker, Kubernetes, Jenkins, Gitlab, Kibana, Elasticsearch.
+                    </CareerPositionKeyTechnology>
+
                 </CareerJobCardContent>
             </CareerJobCard>
             <CareerJobCard>
@@ -291,7 +310,7 @@ function CareerSection() {
                         </CareerPositionDescriptionBulletPoint>
                     </CareerPositionDescription>
                     <CareerPositionKeyTechnology>
-                        Key technologies: Vue, HTML, CSS, Javascript, Node, Bootstrap, SQL.
+                        Key technologies: Clarion, Microsoft SQL Server, SQL, C#, ASP.NET.
                     </CareerPositionKeyTechnology>
                 </CareerJobCardContent>
             </CareerJobCard>

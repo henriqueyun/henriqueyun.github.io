@@ -72,7 +72,7 @@ const Hobbie = styled.span<{ $selected?: boolean; }>`
     align-items: center;
     gap: 32px;
     cursor: pointer;
-    opacity: ${props => !props.$selected ? '0.75' : '1'};
+    opacity: ${props => !props.$selected ? '0.33' : '1'};
     width: 180px;
     &:hover {
         opacity: 1;
